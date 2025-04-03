@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+
+}
+
+@font-face {
+    font-family: 'stolzl_medium';
+    src: url('./assets/font/stolzl_medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'stolzl_regular';
+    src: url('./assets/font/stolzl_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --stol-m:"stolzl_medium" , sans-serif;
+    --stol-r:"stolzl_regular" , sans-serif;
+    --dm_sans :"DM Sans" , sans-serif;
+}
+
+section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

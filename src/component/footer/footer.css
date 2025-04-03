@@ -1,0 +1,130 @@
+.footer_component_left {
+    width: 100%;
+    height: 100%;
+}
+
+.footer_component_left img {
+    width: 100%;
+    height: 100%;
+}
+.footer_component{
+    width: 100%;
+    overflow: hidden;
+}
+.footer_form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.footer_form span {
+    color: #111111;
+    font-family: var(--stol-r), sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer_form h3 {
+    color: #111111;
+    font-family: var(--stol-m), sans-serif;
+    font-size: 50px;
+}
+
+.footer_form input {
+    border: none;
+    border-bottom: #111111 solid 1px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.footer_form input:focus {
+    border: none;
+    border-bottom: #111111 solid 1px;
+}
+
+.footer_form_box {
+    margin-bottom: 50px !important;
+}
+
+.footer_form a{
+    text-decoration: none;
+    background: #df8058;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+.footer_form a:hover{
+    background: #DF6A39;
+}
+
+
+
+footer{
+    background: #1C1919;
+    width: 100%;
+    overflow: hidden;
+}
+.footer_box{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 10px;
+    flex-wrap: wrap;
+}
+
+.footer_item h1{
+    color: white;
+    font-family: var(--stol-m), sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer_item ol{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+.footer_item ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 17px;
+    font-family: var(--dm_sans) , sans-serif;
+}
+.footer_item ol li a{
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 50%;
+    border: rgba(255,255,255,0.15) solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_item  , .footer_item a{
+    color: #D2D3D5;
+    text-decoration: none;
+}
+
+.footer_item .f-tell{
+    color: white;
+    font-size: 22px;
+}
+.footer_item .f-email{
+    font-size: 19px;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 500px){
+    .footer_item:nth-child(3) , .footer_item:nth-child(4){
+        margin-top: 30px;
+    }
+}
