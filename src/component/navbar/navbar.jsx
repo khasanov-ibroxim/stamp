@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./navbar.css";
 import logo from "@/assets/logo.svg";
 import {Link, useLocation} from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/utils/lang/LangContext.jsx";
-import { Dropdown, Space } from "antd";
-import { languages } from "@/utils/lang/langs.jsx";
-import { CloseOutlined, DownOutlined, MenuOutlined } from "@ant-design/icons";
-import { ABOUT, CONTACT, HOME } from "@/utils/const.jsx";
+import {useTranslation} from "react-i18next";
+import {useLanguage} from "@/utils/lang/LangContext.jsx";
+import {Dropdown, Space} from "antd";
+import {languages} from "@/utils/lang/langs.jsx";
+import {CloseOutlined, DownOutlined, MenuOutlined} from "@ant-design/icons";
+import {ABOUT, CONTACT, HOME} from "@/utils/const.jsx";
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -16,8 +16,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 
 const Navbar = () => {
-    const { handleLanguageChange, selectedLanguage } = useLanguage();
-    const { t } = useTranslation();
+    const {handleLanguageChange, selectedLanguage} = useLanguage();
+    const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1200px)").matches);
     const [isFixed, setIsFixed] = useState(false);
@@ -61,11 +61,20 @@ const Navbar = () => {
                 </div>
                 <div className={`nav_menu ${isMenuOpen ? "open" : ""}`}>
                     <ul>
-                        <li className={location === "/" ? "active" : ""}><Link to={HOME}>{t("navbar.home")}</Link></li>
-                        <li className={location === "/about" ? "active" : ""}><Link
-                            to={ABOUT}>{t("navbar.about")}</Link></li>
-                        <li className={location === "/contact" ? "active" : ""}><Link
-                            to={CONTACT}>{t("navbar.contact")}</Link></li>
+                        <li className={location === "/" ? "active" : ""}>
+                            <Link onClick={() => setIsMenuOpen(false)} to={HOME}>{t("navbar.home")}</Link>
+                        </li>
+                        <li className={location === "/about" ? "active" : ""}>
+                            <Link
+                                onClick={() => setIsMenuOpen(false)}
+                                to={ABOUT}>{t("navbar.about")}</Link>
+                        </li>
+                        <li className={location === "/contact" ? "active" : ""}
+                        >
+                            <Link
+                                onClick={() => setIsMenuOpen(false)}
+                                to={CONTACT}>{t("navbar.contact")}</Link>
+                        </li>
                         <li className="lang_nav" style={isMobile ? {display: "flex"} : {display: "none"}}>
                             <Dropdown
                                 menu={{items: languages, onClick: handleLanguageChange}}
@@ -102,7 +111,7 @@ const Navbar = () => {
 
                     </div>
                     <Link to={"#"} className={"nav_end_link"}>Let's talk</Link>
-                    <div className={`navburger `} style={isMenuOpen ? {color:"white"} : {}} onClick={toggleMenu}>
+                    <div className={`navburger `} style={isMenuOpen ? {color: "white"} : {}} onClick={toggleMenu}>
                         {isMenuOpen ? <CloseOutlined/> : <MenuOutlined/>}
                     </div>
                 </div>
