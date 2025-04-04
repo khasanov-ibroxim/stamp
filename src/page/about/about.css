@@ -1,0 +1,330 @@
+.about_header{
+    height: 70vh;
+    background: linear-gradient(90deg, #f8a8c9, #f4be92, #ea8b55, #f58ab2);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.about_header h1{
+    margin-bottom: 10%;
+    font-family: var(--stol-m), sans-serif;
+    font-size: 57px;
+    font-weight: 500;
+}
+
+.about_s1 span{
+    color: #111;
+    font-family: var(--stol-r), sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.about_s1 h2{
+    font-size: 57px;
+    color: #111;
+    font-weight: 700;
+    font-family: var(--stol-r), sans-serif;
+    margin-top: 10px;
+}
+
+.about_s1 p{
+    color: #6D6F72;
+    font-family: var(--dm_sans), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 500px){
+    .about_header h1{
+        font-size: 50px;
+        margin-bottom: 80px;
+    }
+    .about_s1 h2{
+        font-size: 35px;
+    }
+    .about_header{
+        height: 50vh;
+    }
+}
+
+
+.about_s2_item_box{
+    padding: 10px;
+    border-right: 2px solid #d5d3d3;
+    overflow: hidden;
+
+}
+
+.about_s2 .col-lg-3:last-child .about_s2_item_box{
+    border-right: none;
+}
+.about_s2_item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+.about_s2_item_top , .about_s2_item_body , .about_s2_item_bottom{
+    width: 100%;
+    height: 33.33%;
+    margin-bottom: 25px;
+}
+
+.about_s2_item_top{
+    display: flex;
+
+}
+.about_s2_item_top svg{
+    font-size: 60px;
+    color: #E66EB1;
+}
+.about_s2_item_box:hover .about_s2_item_top svg{color: #111;  transition: 0.5s;}
+
+.about_s2_item_body h2{
+    font-size: 22px;
+    color: #111;
+    font-family: var(--stol-m), sans-serif;
+    font-weight: 500;
+}
+.about_s2_item_bottom{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -85%;
+    font-size: 16px;
+    color: #111111;
+    font-weight: 500;
+    font-family: var(--stol-m), sans-serif;
+}
+.about_s2_item_bottom .about_s2_item_bottom_icon svg{
+    font-size: 25px;
+    font-weight: 300;
+}
+.about_s2_item_bottom_icon{
+    margin-left: 20px;
+}
+
+.about_s2_item_box:hover .about_s2_item_bottom{
+    margin-left: 0;
+    transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .about_s2_item_bottom{
+        margin-left:-100%;
+    }
+}
+@media screen and (max-width: 1000px){
+    .about_s2_item_bottom{
+        margin-left:0;
+    }
+}
+
+
+.about_s3_img{
+    width: 100%;
+    height: 100%;
+    background: #EBA34E;
+    border-radius: 20px;
+}
+.about_s3_img img{
+    width: 100%;
+    height: 100%;
+}
+.about_s3_content{
+    padding: 0 30px;
+}
+.about_s3_content_top span{
+    font-family: var(--stol-m) sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #111;
+}
+.about_s3_content_top h1{
+    font-family: var(--stol-r) sans-serif;
+    font-size: 57px;
+    font-weight: 700;
+    color: #111;
+    line-height: 62.0167px;
+    letter-spacing: -1.8px;
+}
+
+.about_s3_content_bottom{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.about_s3_content_bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_s3_content_bottom p{
+    color: #6D6F72;
+    font-size: 17px;
+    font-family: var(--dm_sans), sans-serif;
+
+}
+.about_s3_content_bottom a{
+    background: #F18CC4;
+    color: white;
+    font-weight: 600;
+    padding: 15px 50px;
+    border-radius: 25px;
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.about_s3_content_bottom a:hover{
+    background: #E66EB1;
+}
+
+@media screen and (max-width: 1000px){
+    .about_s3_content_top h1{
+        font-size: 30px;
+        line-height: 30.0167px;
+    }
+    .about_s3_content_bottom{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .about_s3_content{
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+}
+
+
+.about_s4 {
+    overflow: hidden;
+}
+
+.about_s4_corusel_wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.about_s4_corusel {
+    display: flex;
+}
+
+.about_s4_corusel_track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.about_s4_corusel_track span {
+    font-size: 150px;
+    font-weight: bold;
+    padding-right: 100px;
+    white-space: nowrap;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.about_s5{
+    background: #F4F2F7;
+    padding: 50px 0;
+}
+
+.about_s5_left_top h1{
+    font-family: var(--stol-r) sans-serif;
+    font-size: 57px;
+    font-weight: 700;
+    color: #111;
+    line-height: 62.0167px;
+    letter-spacing: -1.8px;
+}
+.about_s5_left_top span{
+    font-family: var(--stol-m) sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #111;
+}
+.about_s5_left_bottom{
+    width: 100%;
+    height: 100%;
+   display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.about_s5_left_bottom img{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px ;
+}
+
+.about_s5_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.about_s5_right_top{
+    width: 100%;
+    height: 80%;
+
+}
+.about_s5_right_top img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px ;
+}
+
+.about_s5_right_bottom p{
+    color: #6D6F72;
+    font-family: var(--dm_sans), sans-serif;
+    font-size: 17px;
+}
+
+.about_s6{
+    margin-top: 50px;
+}
+.about_s6 .home_s5_profile_content{text-align: center}
+.about_s6 .about_s6_element{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #F18CC4;
+}
+.about_s6 h1{
+    font-size: 25px;
+    width: 80%;
+}
+.about_s7 button{
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 1px solid rgba(110, 112 ,116,  0.5);
+    border-radius: 50%;
+    outline: none;
+    margin-bottom: 50px;
+}
+.about_s7 button svg{
+    font-size: 30px;
+}

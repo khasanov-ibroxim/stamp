@@ -42,11 +42,14 @@ import {CloseOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
 import {Collapse} from "antd";
 import Footer_component from "@/component/footer/footer_component.jsx";
 import Footer from "@/component/footer/footer.jsx";
+import VanillaTilt from "vanilla-tilt";
 
-const Home = () => {
+const Home = ({options={}}) => {
     const gridRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [activeKey, setActiveKey] = useState(null);
+    const tiltRef = useRef(null);
+
     const [playPosition, setPlayPosition] = useState({x: "50%", y: "50%"});
     const handleMouseMove = (e) => {
         const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
@@ -176,6 +179,17 @@ const Home = () => {
             });
         }
     }, [items]);
+    useEffect(() => {
+        if (tiltRef.current) {
+            VanillaTilt.init(tiltRef.current, {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare": 0.3,
+                ...options,
+            });
+        }
+    }, [options]);
     return (
         <div className="home">
 
@@ -547,7 +561,7 @@ const Home = () => {
                         <div className="col-lg-6">
                             <div className="home_s8_content_img">
                                 <div className="home_s8_content_img_index">
-                                    <img src={s8_1} alt=""/>
+                                    <img src={s8_1} alt="" ref={tiltRef}/>
                                     <div className="home_s8_content_item_box">
                                         <div className="home_s8_content_item">
                                             <span>Orders</span>

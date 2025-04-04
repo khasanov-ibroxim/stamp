@@ -24,7 +24,8 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.4.1",
     "react-router-dom": "^7.4.0",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
