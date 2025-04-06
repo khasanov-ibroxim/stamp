@@ -7,7 +7,7 @@ import {useLanguage} from "@/utils/lang/LangContext.jsx";
 import {Dropdown, Space} from "antd";
 import {languages} from "@/utils/lang/langs.jsx";
 import {CloseOutlined, DownOutlined, MenuOutlined} from "@ant-design/icons";
-import {ABOUT, CONTACT, HOME} from "@/utils/const.jsx";
+import {ABOUT, CONTACT, HOME, PRODUCTION} from "@/utils/const.jsx";
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -68,6 +68,11 @@ const Navbar = () => {
                             <Link
                                 onClick={() => setIsMenuOpen(false)}
                                 to={ABOUT}>{t("navbar.about")}</Link>
+                        </li>
+                        <li className={location === "/production" ? "active" : ""}>
+                            <Link
+                                onClick={() => setIsMenuOpen(false)}
+                                to={PRODUCTION}>{t("navbar.production")}</Link>
                         </li>
                         <li className={location === "/contact" ? "active" : ""}
                         >

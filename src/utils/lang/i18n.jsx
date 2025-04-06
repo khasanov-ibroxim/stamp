@@ -23,7 +23,7 @@ i18n
                     contact: contact_translate.ru,
                     navbar: {
                         home: "Главная",
-                        faqs: "Вопросы",
+                        production: "производство",
                         about: "О нас",
                         contact: "Контакты"
                     },
@@ -44,7 +44,7 @@ i18n
                     contact: contact_translate.en,
                     navbar: {
                         home: "Home",
-                        faqs: "FAQs",
+                        production: "Production",
                         about: "About us",
                         contact: "Contact us"
                     },
