@@ -261,9 +261,9 @@
     font-family: var(--stol-m), sans-serif;
     color: #111111;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 62.0167px;
-    letter-spacing: -1.8px;
+    font-size: 31px;
+    line-height: 39.0167px;
+    letter-spacing: -0.8px;
 }
 .pr_s4_left p{
     font-family: var(--dm_sans), sans-serif;

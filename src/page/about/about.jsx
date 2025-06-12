@@ -9,6 +9,7 @@ import {Link} from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import Footer_component from "@/component/footer/footer_component.jsx";
 import Footer from "@/component/footer/footer.jsx";
+
 const {Panel} = Collapse;
 
 
@@ -26,6 +27,15 @@ import s6_3 from "@/assets/home/s5/testi-12-copyright.jpg"
 import {Collapse} from "antd";
 import {CloseOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
 import s8_1 from "@/assets/home/s8/img-18-copyright.png";
+import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png";
+import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png";
+import partnior_3 from "@/assets/home/partnior/logo_Mersan-150x49-1.png";
+import partnior_4 from "@/assets/home/partnior/logo_ms_1-91x75-1.png";
+import partnior_5 from "@/assets/home/partnior/logo_setex-150x23-1.png";
+import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png";
+import partnior_7 from "@/assets/home/partnior/part1.png";
+import partnior_8 from "@/assets/home/partnior/part2.png";
+import partnior_9 from "@/assets/home/partnior/part3.png";
 
 
 const About = ({options = {}}) => {
@@ -36,21 +46,18 @@ const About = ({options = {}}) => {
     const itemFAQ = [
         {
             key: 1,
-            label: " Printing services ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Разработка дизайна",
+            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные решения.</p>
         },
         {
             key: 2,
-            label: " Graphic design ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Создание принтов",
+            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения — от креатива до текстуры.</p>
         },
         {
             key: 3,
-            label: " Branding & marketing ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Контроль качества и логистика",
+            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему Узбекистану.</p>
         },
     ];
     useEffect(() => {
@@ -67,21 +74,22 @@ const About = ({options = {}}) => {
     return (
         <div>
             <div className="about_header">
-                <h1>About Us</h1>
+                <h1>О нас</h1>
             </div>
 
             <section className="about_s1">
                 <div className="container-sm">
                     <div className="row  ">
                         <div className="col-lg-6">
-                            <span>Top services</span>
-                            <h2>Crafting prints for your business</h2>
+                            <span>Услуги</span>
+                            <h2>Stampa Textile -</h2>
+                            <p>Инновации в печати и окрашивании тканей</p>
                         </div>
                         <div className="col-lg-6 align-items-end justify-content-end d-flex flex-column">
-                            <p>Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore magna aliqua. Ut enim
-                                ad minim veniam, quis nostrud exercitation ullamco.</p>
-                            <p>Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore magna aliqua. Ut enim
-                                ad minim veniam.</p>
+                            <p>Мы специализируемся на выпуске гладкоокрашенных и печатных трикотажных полотен, а также
+                                работаем с широким спектром ткацких материалов. </p>
+                            <p>Используем только передовое оборудование из Турции и Италии, обеспечивая промышленное
+                                качество на каждом этапе.</p>
                         </div>
                     </div>
                 </div>
@@ -97,11 +105,11 @@ const About = ({options = {}}) => {
                                         <InventoryRoundedIcon/>
                                     </div>
                                     <div className="about_s2_item_body">
-                                        <h2>Branded <br/> packages </h2>
+                                        <h2>Цифровая <br/> печать </h2>
                                     </div>
                                     <div className="about_s2_item_bottom">
                                         <div className="about_s2_item_bottom_text">
-                                            Read More
+                                            узнать больше
                                         </div>
                                         <div className="about_s2_item_bottom_icon">
                                             <EastRoundedIcon/>
@@ -117,11 +125,11 @@ const About = ({options = {}}) => {
                                         <LibraryBooksIcon/>
                                     </div>
                                     <div className="about_s2_item_body">
-                                        <h2>Branded <br/> packages </h2>
+                                        <h2>Крашение </h2><br/>
                                     </div>
                                     <div className="about_s2_item_bottom">
                                         <div className="about_s2_item_bottom_text">
-                                            Read More
+                                            узнать больше
                                         </div>
                                         <div className="about_s2_item_bottom_icon">
                                             <EastRoundedIcon/>
@@ -130,47 +138,6 @@ const About = ({options = {}}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 col-md-6 col-lg-3">
-                            <div className="about_s2_item_box">
-                                <div className="about_s2_item">
-                                    <div className="about_s2_item_top">
-                                        <LibraryBooksIcon/>
-                                    </div>
-                                    <div className="about_s2_item_body">
-                                        <h2>Branded <br/> packages </h2>
-                                    </div>
-                                    <div className="about_s2_item_bottom">
-                                        <div className="about_s2_item_bottom_text">
-                                            Read More
-                                        </div>
-                                        <div className="about_s2_item_bottom_icon">
-                                            <EastRoundedIcon/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-6 col-lg-3">
-                            <div className="about_s2_item_box">
-                                <div className="about_s2_item">
-                                    <div className="about_s2_item_top">
-                                        <LibraryBooksIcon/>
-                                    </div>
-                                    <div className="about_s2_item_body">
-                                        <h2>Branded <br/> packages </h2>
-                                    </div>
-                                    <div className="about_s2_item_bottom">
-                                        <div className="about_s2_item_bottom_text">
-                                            Read More
-                                        </div>
-                                        <div className="about_s2_item_bottom_icon">
-                                            <EastRoundedIcon/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
@@ -186,16 +153,14 @@ const About = ({options = {}}) => {
                         <div className="col-lg-6">
                             <div className="about_s3_content">
                                 <div className="about_s3_content_top">
-                                    <span>Creative approach</span>
-                                    <h1>Your ideas, our arsenal: we will bring them
-                                        to life in the best quality</h1>
+                                    <span>Надёжное партнёрство</span>
+                                    <h1> Ваш дизайн — наша печать: создаём на ткани без компромиссов</h1>
                                 </div>
                                 <div className="about_s3_content_bottom">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste
-                                        natus. Sed ut perspiciatis unde.
-                                    </p>
-                                    <Link to={"#"}>Lets Talk!</Link>
+                                    <p>Команда «Stampa Textile» стремится к постоянному улучшению продукции и сервисов,
+                                        внедряя прогрессивные методы работы. Мы ценим доверие клиентов и предлагаем
+                                        выгодные условия сотрудничества, включая гибкую систему скидок.</p>
+                                    <Link to={"#"}>Свяжитесь</Link>
                                 </div>
                             </div>
                         </div>
@@ -204,12 +169,22 @@ const About = ({options = {}}) => {
             </section>
 
             <section className="about_s4">
-                <div className="about_s4_corusel_wrapper">
-                    <div className="about_s4_corusel">
-                        <div className="about_s4_corusel_track">
-                            <span>Package Printing & Design </span>
-                            <span>Package Printing & Design </span>
-                        </div>
+                <div className="home_corusel_wrapper">
+                    <div className="home_corusel">
+                        {Array.from({ length: 2 }).map((_, index) => (
+                            <React.Fragment key={index}>
+                                <div className="home_corusel_item">
+                                    Печать & Дизайн
+                                </div>
+                                <div className="home_corusel_item">
+                                    Цвет
+                                </div>
+                                <div className="home_corusel_item">
+                                    Стиль
+                                </div>
+                            </React.Fragment>
+                        ))}
+
                     </div>
                 </div>
             </section>
@@ -219,8 +194,8 @@ const About = ({options = {}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="about_s5_left_top">
-                                <span>What we do</span>
-                                <h1>Elevate your brand with stunning packaging</h1>
+                                <span>Что мы делаем</span>
+                                <h1>Поднимаем ваш бренд через качественную печать на тканях</h1>
                             </div>
                             <div className="about_s5_left_bottom">
                                 <img src={s5_1} alt=""/>
@@ -233,8 +208,9 @@ const About = ({options = {}}) => {
                                 </div>
                                 <div className="about_s5_right_bottom">
                                     <p>
-                                        Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt.
+                                        Мы превращаем ткань в визуальное заявление и создаём текстиль, который говорит за вас.
+                                        Ваш стиль — наша печать: делаем ваш текстиль лицом бренда.
+
                                     </p>
                                 </div>
                             </div>
@@ -253,43 +229,17 @@ const About = ({options = {}}) => {
                             <SwiperSlide>
                                 <div className="home_s5_item">
                                     <span className={"about_s6_element"}>&#10075;&#10075;</span>
-                                    <h1>Appreciate your professional approach to every situation. It was a
-                                        pleasure!</h1>
+                                    <h1>Ваша эстетика + наша печать = ткань, которую невозможно не заметить!</h1>
                                     <div className="home_s5_item_content">
 
                                         <div className="home_s5_profile_content">
-                                            <h3>April Robinson</h3>
-                                            <p>Client</p>
+                                            {/*<h3>April Robinson</h3>*/}
+                                            {/*<p>Client</p>*/}
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="home_s5_item">
-                                    <span className={"about_s6_element"}>&#10075;&#10075;</span>
-                                    <h1>Appreciate your professional approach to every situation. It was a
-                                        pleasure!</h1>
-                                    <div className="home_s5_item_content">
-                                        <div className="home_s5_profile_content">
-                                            <h3>April Robinson</h3>
-                                            <p>Client</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="home_s5_item">
-                                    <span className={"about_s6_element"}>&#10075;&#10075;</span>
-                                    <h1>Appreciate your professional approach to every situation. It was a
-                                        pleasure!</h1>
-                                    <div className="home_s5_item_content">
-                                        <div className="home_s5_profile_content">
-                                            <h3>April Robinson</h3>
-                                            <p>Client</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+
                         </Swiper>
                     </div>
                 </div>
@@ -301,8 +251,8 @@ const About = ({options = {}}) => {
                     <div className="row ">
                         <div className="col-lg-6">
                             <div className="home_s8_content">
-                                <button onClick={()=>setIsOpen(true)}><PlayArrowRoundedIcon/></button>
-                                <h1>Print for yourself or your business</h1>
+                                <button onClick={() => setIsOpen(true)}><PlayArrowRoundedIcon/></button>
+                                <h1>Комплексный подход к печати</h1>
                                 <Collapse
                                     accordion
                                     expandIconPosition="start"
@@ -324,14 +274,14 @@ const About = ({options = {}}) => {
                                     <img src={s8_1} alt=""/>
                                     <div className="home_s8_content_item_box">
                                         <div className="home_s8_content_item">
-                                            <span>Orders</span>
-                                            <h3>16K+</h3>
-                                            <p>Adipiscing elit, do eiusm.</p>
+                                            <span>лет</span>
+                                            <h3>10+ </h3>
+                                            <p> на рынке</p>
                                         </div>
                                         <div className="home_s8_content_item">
-                                            <span>Reviews</span>
-                                            <h3>13K+</h3>
-                                            <p>Sed do eiusmod tempor.</p>
+                                            <span> довольных </span>
+                                            <h3>580+</h3>
+                                            <p>клиентов</p>
                                         </div>
                                     </div>
                                 </div>
@@ -343,98 +293,37 @@ const About = ({options = {}}) => {
             <section className={"home_s9"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
+                        {Array.from({ length: 2 }).map((_, index) => (
+                            <React.Fragment key={index}>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_1} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_2} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_3} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_4} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_5} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_6} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_7} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_8} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_9} alt="Stamp partnior" />
+                                </div>
+                            </React.Fragment>
+                        ))}
 
                     </div>
                 </div>

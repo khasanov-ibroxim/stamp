@@ -44,57 +44,41 @@ const Production = () => {
     return (
         <div>
             <div className="about_header">
-                <h1>Our Services</h1>
+                <h1>Наши услуги</h1>
             </div>
             <section className="home_s1">
                 <div className="container-sm">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className=" home_s1_item_1">
-                                <span>Corporate service</span>
-                                <h1>How can we help your business?</h1>
+                                <span>Технологии цвета</span>
+                                <h1>Печатаем и окрашиваем безупречно</h1>
                                 <p>
-                                    Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                    odit aut fugit, sed quia.
+                                    Мы используем современные методы цифровой печати и крашения, чтобы передать каждую
+                                    деталь с точностью, глубиной и стойкостью цвета.
                                 </p>
                             </div>
                         </div>
                         <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
+                            <div className=" home_s1_item_standart" style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                boxShadow: "0 0 5px rgba(0,0,0,.5)",
+                                borderRadius: "20px"
+                            }}>
                                 <AllInboxIcon/>
-                                <p>Posters <br/> and stickers</p>
+                                <p>Печать</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
+                            <div className=" home_s1_item_standart" style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                boxShadow: "0 0 5px rgba(0,0,0,.5)",
+                                borderRadius: "20px"
+                            }}>
                                 <AllInboxIcon/>
-                                <p>Banners <br/> and citylight</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
-                                <SellIcon/>
-                                <p>T-shirts <br/> and apparel</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
-                                <p>Billboards <br/> and signs</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
-                                <p>Flyers <br/> and booklets</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
-                                <p>Packaging <br/> and cups</p>
+                                <p>Крашение</p>
                             </div>
                         </div>
                     </div>
@@ -108,13 +92,15 @@ const Production = () => {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <div className="pr_s1_content">
-                            <h1>Imprinting your brand identity</h1>
-                            <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium.</p>
-                            <p>Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                voluptatem quia voluptas.</p>
+                            <h1>Цвет, который остаётся</h1>
+                            <p>Мы используем реактивные чернила на водной основе с международными сертификатами
+                                безопасности — идеально даже для детской одежды. Печатаем на своих тканях или на
+                                предоставленных заказчиком, от «суровья» до готового результата.</p>
+                            <p>Газо-опалка MERSAN обеспечивает идеальную подготовку ткани, а принтер MS JPK EVO (Италия)
+                                печатает до 240 см в ширину с насыщенностью, стойкостью и максимальной детализацией без
+                                ограничений в цветах.</p>
 
-                            <Link to={ABOUT}>About Us</Link>
+                            <Link to={ABOUT}>Свяжитесь</Link>
                             <div className="circle-wrapper">
                                 <div className="rotating-text">
                                     <img src={s1_about} alt=""/>
@@ -132,8 +118,9 @@ const Production = () => {
             <section className="pr_s2 cursor_left_right">
                 <div className="container-sm">
                     <div className="pr_s2_top">
-                        <span>What We Do</span>
-                        <h1>Our popular services</h1>
+                        <span>Свяжитесь</span>
+                        <h1 style={{textAlign: "center"}}>Выбирают чаще всего — за качество, стиль и точность
+                            исполнения</h1>
                     </div>
 
                     <Swiper
@@ -266,12 +253,22 @@ const Production = () => {
             </section>
 
             <section className="pr_s3">
-                <div className="about_s4_corusel_wrapper">
-                    <div className="about_s4_corusel">
-                        <div className="about_s4_corusel_track">
-                            <span>Package Printing & Design </span>
-                            <span>Package Printing & Design </span>
-                        </div>
+                <div className="home_corusel_wrapper">
+                    <div className="home_corusel">
+                        {Array.from({length: 2}).map((_, index) => (
+                            <React.Fragment key={index}>
+                                <div className="home_corusel_item">
+                                    Печать & Дизайн
+                                </div>
+                                <div className="home_corusel_item">
+                                    Цвет
+                                </div>
+                                <div className="home_corusel_item">
+                                    Стиль
+                                </div>
+                            </React.Fragment>
+                        ))}
+
                     </div>
                 </div>
             </section>
@@ -283,28 +280,22 @@ const Production = () => {
                                 {!mediaQuery ?
                                     <div className={"pr_s4_box"}>
                                         <div className="pr_s4_left">
-                                            <span>The process</span>
-                                            <h1>How to create custom products</h1>
-                                            <p>
-                                                Sed ut perspiciatis unde omnis iste
-                                                natus error sit voluptatem accusantium
-                                                doloremque laudantium.
-                                            </p>
+                                            <span>Точное окрашивание</span>
+                                            <h1>Современные технологии для яркости, стойкости и безупречного цвета</h1>
+                                            <p>Каждый метр ткани проходит точную обработку, обеспечивая глубину цвета,
+                                                идеальную равномерность и долговечность даже после множества стирок.</p>
                                         </div>
                                     </div> :
                                     <div className="pr_s4_left" style={{marginBottom: "20px"}}>
-                                        <span>The process</span>
-                                        <h1>How to create custom products</h1>
-                                        <p>
-                                            Sed ut perspiciatis unde omnis iste
-                                            natus error sit voluptatem accusantium
-                                            doloremque laudantium.
-                                        </p>
+                                        <span>Точное окрашивание</span>
+                                        <h1>Современные технологии для яркости, стойкости и безупречного цвета</h1>
+                                        <p>Каждый метр ткани проходит точную обработку, обеспечивая глубину цвета,
+                                            идеальную равномерность и долговечность даже после множества стирок.</p>
                                     </div>
                                 }
 
                             </div>
-                            <div className="col-lg-6" style={mediaQuerySM ? {padding:"0 30px"} : {}}>
+                            <div className="col-lg-6" style={mediaQuerySM ? {padding: "0 30px"} : {}}>
                                 <Timeline
                                     items={[
                                         {
@@ -312,11 +303,8 @@ const Production = () => {
                                                 <PrecisionManufacturingIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Choose a template</h1>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-                                                    cum, deleniti doloribus ducimus exercitationem fugit laboriosam nam
-                                                    numquam possimus, quas reiciendis repellendus unde, voluptate. Atque
-                                                    fugiat hic magni molestias perferendis?</p>
+                                                <h1>Стойкость цвета</h1>
+                                                <p>Окрашивание не выгорает, не тускнеет и выдерживает многократные стирки.</p>
                                             </>,
                                         },
                                         {
@@ -324,11 +312,8 @@ const Production = () => {
                                                 <PrecisionManufacturingIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Choose a template</h1>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-                                                    cum, deleniti doloribus ducimus exercitationem fugit laboriosam nam
-                                                    numquam possimus, quas reiciendis repellendus unde, voluptate. Atque
-                                                    fugiat hic magni molestias perferendis?</p>
+                                                <h1>Высокое качество</h1>
+                                                <p>Цвет ложится равномерно, создавая насыщенные и чёткие оттенки.</p>
                                             </>,
                                         },
                                         {
@@ -336,11 +321,8 @@ const Production = () => {
                                                 <PrecisionManufacturingIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Choose a template</h1>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-                                                    cum, deleniti doloribus ducimus exercitationem fugit laboriosam nam
-                                                    numquam possimus, quas reiciendis repellendus unde, voluptate. Atque
-                                                    fugiat hic magni molestias perferendis?</p>
+                                                <h1>Полная свобода</h1>
+                                                <p>Возможна запечатка всей поверхности ткани, даже самых сложных дизайнов.</p>
                                             </>,
                                         },
                                         {
@@ -348,11 +330,8 @@ const Production = () => {
                                                 <PrecisionManufacturingIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Choose a template</h1>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-                                                    cum, deleniti doloribus ducimus exercitationem fugit laboriosam nam
-                                                    numquam possimus, quas reiciendis repellendus unde, voluptate. Atque
-                                                    fugiat hic magni molestias perferendis?</p>
+                                                <h1>Надёжная технология</h1>
+                                                <p>Используем красители от Rudolf, Birkim и Bezema, а также точную рецептуру с лабораторией ATAC.</p>
                                             </>,
                                         },
 
@@ -412,8 +391,8 @@ const Production = () => {
                             <div className="col-lg-6">
                                 <div className="contact_content">
                                     <div className="contact_content_top">
-                                        <span>Contact Us</span>
-                                        <h1>Have questions? <br/> Get in touch!</h1>
+                                        <span>Контакты</span>
+                                        <h1>Готовы к сотрудничеству? <br/> Обсудим ваш проект!</h1>
                                         <p>
                                             Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                             aliqua. Ut enim ad minim.
@@ -533,7 +512,7 @@ const Production = () => {
                                         alt=""/>
                                 </div>
                             </div>
-                        </div>:
+                        </div> :
                         <section className={"home_s9"}>
                             <div className="home_corusel_wrapper">
                                 <div className="home_corusel">
