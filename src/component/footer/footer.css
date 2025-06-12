@@ -42,6 +42,14 @@
     padding: 10px;
     outline: none;
 }
+.footer_form textarea {
+    border: none;
+    border-bottom: #111111 solid 1px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
 
 .footer_form input:focus {
     border: none;
@@ -50,6 +58,10 @@
 
 .footer_form_box {
     margin-bottom: 50px !important;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
 }
 
 .footer_form a{

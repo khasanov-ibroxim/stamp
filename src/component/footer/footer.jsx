@@ -21,12 +21,13 @@ const Footer = () => {
                     <div className="footer_item">
                         <h1>Office</h1>
                         <ul>
-                            <li>Germany —</li>
-                            <li>785 15h Street, Office 478</li>
-                            <li>Berlin, De 81566</li>
+                            <li>Республика Узбекистан,</li>
+                            <li>город Ташкент, Бектемирский р-н,</li>
+                            <li> улица Туена 12</li>
                         </ul>
-                        <a href="#" className={"f-email"}>office@mail.com</a><br/>
-                        <a href="#" className={"f-tell"}>+998 99 999 99 99</a>
+                        <a href="#" className={"f-email"}>ilxom.mirbabayev@stampa.uz</a><br/>
+                        <a href="#" className={"f-email"}>kuvnakov.laziz@stampa.uz</a><br/>
+                        <a href="#" className={"f-tell"}>(+99891) 162-98-89</a>
                     </div>
                     <div className="footer_item">
                         <h1>Links</h1>

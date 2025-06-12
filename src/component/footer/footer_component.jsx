@@ -14,21 +14,15 @@ const FooterComponent = () => {
                 </div>
                 <div className="col-lg-5">
                     <div className="footer_form">
-                        <span>Contact Us</span>
-                        <h3>Have questions? <br/> Get in touch!</h3>
+                        <span>Контакты</span>
+                        <h3>Готовы к сотрудничеству? <br/> Обсудим ваш проект!</h3>
                         <div className="footer_form_box">
-                            <div className="row ">
-                                <div className="col-lg-6"><input type="text" placeholder={"Name"}/></div>
-                                <div className="col-lg-6"><input type="text" placeholder={"Last Name"}/></div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6"><input type="text" placeholder={"Email"}/></div>
-                                <div className="col-lg-6"><input type="text" placeholder={"Phone"}/></div>
-                            </div>
-                            <div className="row"><input type="text" placeholder={"Message"} className={"input_msg"}/></div>
+                            <input type="text" placeholder={"Имя"}/>
+                            <input type="tel" placeholder={"Телефон"}/>
+                            <textarea rows={5} placeholder={"Сообщение"} className={"input_msg"}/>
 
                         </div>
-                        <Link to={"#"}><TelegramIcon/> Get in Touch</Link>
+                        <Link to={"#"}><TelegramIcon/> Свяжитесь</Link>
                     </div>
                 </div>
             </div>

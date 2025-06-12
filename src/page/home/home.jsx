@@ -31,7 +31,15 @@ import s7_2 from "@/assets/home/s7/img-19-copyright.jpg"
 
 import s8_1 from "@/assets/home/s8/img-18-copyright.png"
 
-import s9_1 from "@/assets/home/s9/logo_link.png"
+import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png"
+import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png"
+import partnior_3 from "@/assets/home/partnior/logo_Mersan-150x49-1.png"
+import partnior_4 from "@/assets/home/partnior/logo_ms_1-91x75-1.png"
+import partnior_5 from "@/assets/home/partnior/logo_setex-150x23-1.png"
+import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png"
+import partnior_7 from "@/assets/home/partnior/part1.png"
+import partnior_8 from "@/assets/home/partnior/part2.png"
+import partnior_9 from "@/assets/home/partnior/part3.png"
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -44,7 +52,7 @@ import Footer_component from "@/component/footer/footer_component.jsx";
 import Footer from "@/component/footer/footer.jsx";
 import VanillaTilt from "vanilla-tilt";
 
-const Home = ({options={}}) => {
+const Home = ({options = {}}) => {
     const gridRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [activeKey, setActiveKey] = useState(null);
@@ -58,26 +66,23 @@ const Home = ({options={}}) => {
         setPlayPosition({x: `${x}%`, y: `${y}%`});
     };
     const handleMouseLeave = () => {
-        setPlayPosition({ x: "50%", y: "50%" }); // Tugmani yana markazga qaytarish
+        setPlayPosition({x: "50%", y: "50%"}); // Tugmani yana markazga qaytarish
     };
     const itemFAQ = [
         {
             key: 1,
-            label: " Printing services ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Разработка дизайна",
+            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные решения.</p>
         },
         {
             key: 2,
-            label: " Graphic design ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Создание принтов",
+            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения — от креатива до текстуры.</p>
         },
         {
             key: 3,
-            label: " Branding & marketing ",
-            children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                mattis, pulvinar dapibus leo.</p>
+            label: "Контроль качества и логистика",
+            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему Узбекистану.</p>
         },
     ];
     const items = [
@@ -198,21 +203,20 @@ const Home = ({options={}}) => {
                 <div className="container-sm">
                     <div className="header_box">
                         <div className="header_top_element">
-                            <h1 data-aos="fade-up">Your printing</h1>
+                            <h1 data-aos="fade-up">Цифровая печать</h1>
                         </div>
                         <div className="header_bottom_element">
                             <div className="col-lg-4">
                                 <p>
-                                    Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut
-                                    enim
-                                    ad minim veniam. Natus error sit voluptatem accusantium.
+                                    Откройте для себя экологически чистую печать на тканях с промышленным качеством
+                                    — <br/>
+                                    сочные цвета, точные детали и забота о планете в каждом отпечатке.
                                 </p>
                                 <div className="header_down">
                                     <img src={down} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-4"><h1 data-aos="fade-up">experts</h1></div>
+                            <div className="col-lg-4"><h1 data-aos="fade-up">нового поколения</h1></div>
                         </div>
                     </div>
                 </div>
@@ -223,24 +227,25 @@ const Home = ({options={}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className=" home_s1_item_1">
-                                <span>Corporate service</span>
-                                <h1>How can we help your business?</h1>
+                                <span>Умная печать</span>
+                                <h1>Как совместить безупречное качество печати и заботу об экологии?</h1>
                                 <p>
-                                    Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                    odit aut fugit, sed quia.
+                                    Мы предлагаем цифровую печать на тканях, сочетающую индустриальную точность с
+                                    экологической ответственностью. Высокая стойкость, яркость и безопасность — теперь
+                                    без компромиссов.
                                 </p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <AllInboxIcon/>
-                                <p>Posters <br/> and stickers</p>
+                                <p>Экологичные <br/> чернила</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <AllInboxIcon/>
-                                <p>Banners <br/> and citylight</p>
+                                <p> Тканевая  <br/> основа</p>
                             </div>
                         </div>
                     </div>
@@ -248,25 +253,25 @@ const Home = ({options={}}) => {
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SellIcon/>
-                                <p>T-shirts <br/> and apparel</p>
+                                <p>Промышленная   <br/> стойкость</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Billboards <br/> and signs</p>
+                                <p>Фотореалистичная  <br/> точность</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Flyers <br/> and booklets</p>
+                                <p>Безопасность  <br/> материалов</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Packaging <br/> and cups</p>
+                                <p>Гибкость  <br/> тиражей </p>
                             </div>
                         </div>
                     </div>
@@ -289,11 +294,10 @@ const Home = ({options={}}) => {
                         </div>
                         <div className="col-lg-5">
                             <div className="home_s2_text_content">
-                                <span>Individual approach</span>
-                                <h1>Let’s make a unique print</h1>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque.</p>
-                                <Link to={"#"}>Our Service</Link>
+                                <span>Уникальный принт</span>
+                                <h1>Персонально. Точно. Экологично.</h1>
+                                <p>Мы создаём печать, отражающую ваш стиль, идею и характер — точно, ярко и экологично.</p>
+                                <Link to={"#"}>Услуги</Link>
                             </div>
                         </div>
                     </div>
@@ -303,16 +307,19 @@ const Home = ({options={}}) => {
             <section className={"home_s3"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        <div className="home_corusel_item">Graphic</div>
-                        <div className="home_corusel_item">Product</div>
-                        <div className="home_corusel_item">Graphic</div>
-                        <div className="home_corusel_item">Product</div>
-                        <div className="home_corusel_item">Graphic</div>
-                        <div className="home_corusel_item">Product</div>
-                        <div className="home_corusel_item">Graphic</div>
-                        <div className="home_corusel_item">Product</div>
-                        <div className="home_corusel_item">Graphic</div>
-                        <div className="home_corusel_item">Product</div>
+                        <div className="home_corusel_item">Ярко</div>
+                        <div className="home_corusel_item">Качественно</div>
+                        <div className="home_corusel_item">Современно</div>
+                        <div className="home_corusel_item">Ярко</div>
+                        <div className="home_corusel_item">Быстро</div>
+                        <div className="home_corusel_item">Надёжно</div>
+                        <div className="home_corusel_item">Ярко</div>
+                        <div className="home_corusel_item">Качественно</div>
+                        <div className="home_corusel_item">Современно</div>
+                        <div className="home_corusel_item">Ярко</div>
+                        <div className="home_corusel_item">Быстро</div>
+                        <div className="home_corusel_item">Надёжно</div>
+
                     </div>
                 </div>
             </section>
@@ -419,7 +426,9 @@ const Home = ({options={}}) => {
                     >
                         <SwiperSlide>
                             <div className="home_s5_item">
-                                <h1>Appreciate your professional approach to every situation. It was a pleasure!</h1>
+                                <h1>Наши клиенты — наш голос. <br/>
+                                    Они уже выбрали качество, теперь говорят о нём.
+                                </h1>
                                 <div className="home_s5_item_content">
                                     <div className="home_s5_profile">
                                         <img src={s5_1} alt=""/>
@@ -433,13 +442,15 @@ const Home = ({options={}}) => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="home_s5_item">
-                                <h1>Appreciate your professional approach to every situation. It was a pleasure!</h1>
+                                <h1>Наши клиенты — наш голос. <br/>
+                                    Они уже выбрали качество, теперь говорят о нём.
+                                </h1>
                                 <div className="home_s5_item_content">
                                     <div className="home_s5_profile">
                                         <img src={s5_2} alt=""/>
                                     </div>
                                     <div className="home_s5_profile_content">
-                                        <h3>Aprilasdasd Robinson</h3>
+                                        <h3>April Robinson</h3>
                                         <p>Client</p>
                                     </div>
                                 </div>
@@ -447,18 +458,21 @@ const Home = ({options={}}) => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="home_s5_item">
-                                <h1>Appreciate your professional approach to every situation. It was a pleasure!</h1>
+                                <h1>Наши клиенты — наш голос. <br/>
+                                    Они уже выбрали качество, теперь говорят о нём.
+                                </h1>
                                 <div className="home_s5_item_content">
                                     <div className="home_s5_profile">
                                         <img src={s5_3} alt=""/>
                                     </div>
                                     <div className="home_s5_profile_content">
-                                        <h3>Aprilzxcwe Robinson</h3>
+                                        <h3>April Robinson</h3>
                                         <p>Client</p>
                                     </div>
                                 </div>
                             </div>
                         </SwiperSlide>
+
                     </Swiper>
                 </div>
             </section>
@@ -542,7 +556,7 @@ const Home = ({options={}}) => {
                     <div className="row ">
                         <div className="col-lg-6">
                             <div className="home_s8_content">
-                                <h1>Print for yourself or your business</h1>
+                                <h1>Комплексный подход к печати</h1>
                                 <Collapse
                                     accordion
                                     expandIconPosition="start"
@@ -564,14 +578,14 @@ const Home = ({options={}}) => {
                                     <img src={s8_1} alt="" ref={tiltRef}/>
                                     <div className="home_s8_content_item_box">
                                         <div className="home_s8_content_item">
-                                            <span>Orders</span>
-                                            <h3>16K+</h3>
-                                            <p>Adipiscing elit, do eiusm.</p>
+                                            <span>лет</span>
+                                            <h3>10+ </h3>
+                                            <p> на рынке</p>
                                         </div>
                                         <div className="home_s8_content_item">
-                                            <span>Reviews</span>
-                                            <h3>13K+</h3>
-                                            <p>Sed do eiusmod tempor.</p>
+                                            <span> довольных </span>
+                                            <h3>580+</h3>
+                                            <p>клиентов</p>
                                         </div>
                                     </div>
                                 </div>
@@ -584,98 +598,37 @@ const Home = ({options={}}) => {
             <section className={"home_s9"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
-                        <div className="home_corusel_item"><img
-                            src={"https://printy.themerex.net/wp-content/uploads/2023/11/partner-8-copyright.png"}
-                            alt=""/></div>
+                        {Array.from({ length: 2 }).map((_, index) => (
+                            <React.Fragment key={index}>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_1} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_2} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_3} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_4} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_5} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_6} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_7} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_8} alt="Stamp partnior" />
+                                </div>
+                                <div className="home_corusel_item">
+                                    <img src={partnior_9} alt="Stamp partnior" />
+                                </div>
+                            </React.Fragment>
+                        ))}
 
                     </div>
                 </div>
