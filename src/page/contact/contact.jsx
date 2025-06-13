@@ -17,7 +17,7 @@ const Contact = () => {
     return (
         <div>
             <div className="about_header">
-                <h1>Contact</h1>
+                <h1>Контакты</h1>
             </div>
             <section className={"contact"}>
                 <div className="container-sm">
@@ -25,26 +25,26 @@ const Contact = () => {
                         <div className="col-lg-6">
                             <div className="contact_content">
                                 <div className="contact_content_top">
-                                    <span>Contact Us</span>
-                                    <h1>Have questions? <br/> Get in touch!</h1>
+                                    <span>Контакты</span>
+                                    <h1>Готовы к сотрудничеству? <br/> Обсудим ваш проект!</h1>
                                     <p>
-                                        Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim.
+                                        От идеи до реализации, учитывая каждую деталь и ваши пожелания.
                                     </p>
                                 </div>
                                 <div className="contact_content_bottom">
                                     <ul>
                                         <li>
                                             <LocationOnRoundedIcon/>
-                                            <a href="#">785 15h Street, Office 478 Berlin</a>
+                                            <a href="#">Республика Узбекистан,город Ташкент, Бектемирский р-н, улица
+                                                Туена 12</a>
                                         </li>
                                         <li>
                                             <PhoneAndroidRoundedIcon/>
-                                            <a href="#">+998 99 999 99 99</a>
+                                            <a href="tel:+998911629889">(+99891) 162-98-89</a>
                                         </li>
                                         <li>
                                             <MailOutlineRoundedIcon/>
-                                            <a href="#">Office@office.com</a>
+                                            <a href="mailto:ilxom.mirbabayev@stampa.uz">ilxom.mirbabayev@stampa.uz</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -53,30 +53,18 @@ const Contact = () => {
                         <div className="col-lg-6">
                             <div className="contact_form">
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-12">
                                         <div className="input">
                                             <PersonOutlineSharpIcon/>
-                                            <input type="text" placeholder={"Name"}/>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <div className="input">
-                                            <EmailOutlinedIcon/>
-                                            <input type="email" placeholder={"Email Address"}/>
+                                            <input type="text" placeholder={"Имя"}/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="row" style={{marginTop: "30px"}}>
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-12">
                                         <div className="input">
                                             <PhoneInTalkOutlinedIcon/>
-                                            <input type="tel" placeholder={"Phone"}/>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <div className="input">
-                                            <ErrorOutlineOutlinedIcon/>
-                                            <input type="text" placeholder={"Subject"}/>
+                                            <input type="tel" placeholder={"Телефон"}/>
                                         </div>
                                     </div>
                                 </div>
@@ -87,21 +75,15 @@ const Contact = () => {
                                             <textarea
                                                 rows={3}
                                                 type="text"
-                                                placeholder={"How can we help you? Feel free to get in touch! "}/>
+                                                placeholder={"Оставьте заявку — создадим нечто выдающееся вместе!"}/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="row mt-5 d-flex justify-content-center align-items-center">
-                                    <div className="col-lg-6 col-sm-6 col-md-6">
+                                    <div className="col-lg-12 col-sm-6 col-md-6">
                                         <div className="contact_btn">
-                                            <Link to={"#"}><SendOutlinedIcon/>Get in touch</Link>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-sm-6 col-md-6">
-                                        <div className="contact_check d-flex justify-content-center align-items-center">
-                                            <input type="checkbox"/>
-                                            <p>I agree with this site's <a href="#">privacy policy</a></p>
+                                            <Link to={"#"}><SendOutlinedIcon/>Свяжитесь</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -113,9 +95,10 @@ const Contact = () => {
             </section>
 
             <div className={"map"}>
+
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12003.334328322855!2d69.20430055!3d41.22539695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae61a2ca2658d9%3A0xea6f4e90abf3d47d!2sSergeli%20Dehqon%20Bozori!5e0!3m2!1sru!2s!4v1743804614139!5m2!1sru!2s"
-                    width="100%" height="550"  allowFullScreen="" loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48003.49435717486!2d69.33147675000001!3d41.238800399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5fab0f180df5%3A0xa63b5f7a0b738831!2z0JHQtdC60YLQtdC80LjRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQotCw0YjQutC10L3RgtGB0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2s!4v1749836119439!5m2!1sru!2s"
+                    width="100%" height="550" style={{border:"none"}} allowFullScreen="" loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 

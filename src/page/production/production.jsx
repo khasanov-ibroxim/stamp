@@ -36,6 +36,18 @@ import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import Footer from "@/component/footer/footer.jsx";
 
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import BalanceIcon from '@mui/icons-material/Balance';
+import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
+import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png";
+import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png";
+import partnior_3 from "@/assets/home/partnior/logo_Mersan-150x49-1.png";
+import partnior_4 from "@/assets/home/partnior/logo_ms_1-91x75-1.png";
+import partnior_5 from "@/assets/home/partnior/logo_setex-150x23-1.png";
+import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png";
+import partnior_7 from "@/assets/home/partnior/part1.png";
+import partnior_8 from "@/assets/home/partnior/part2.png";
+import partnior_9 from "@/assets/home/partnior/part3.png";
 
 const Production = () => {
     const mediaQuery = useMediaQuery('(max-width: 1024px)');
@@ -54,7 +66,7 @@ const Production = () => {
                                 <span>Технологии цвета</span>
                                 <h1>Печатаем и окрашиваем безупречно</h1>
                                 <p>
-                                    Мы используем современные методы цифровой печати и крашения, чтобы передать каждую
+                                    Применяем современные методы цифровой печати и крашения, чтобы передать каждую
                                     деталь с точностью, глубиной и стойкостью цвета.
                                 </p>
                             </div>
@@ -118,7 +130,7 @@ const Production = () => {
             <section className="pr_s2 cursor_left_right">
                 <div className="container-sm">
                     <div className="pr_s2_top">
-                        <span>Свяжитесь</span>
+                        <span>Предпочтение</span>
                         <h1 style={{textAlign: "center"}}>Выбирают чаще всего — за качество, стиль и точность
                             исполнения</h1>
                     </div>
@@ -300,16 +312,17 @@ const Production = () => {
                                     items={[
                                         {
                                             dot: <div className="pr_s4_icon">
-                                                <PrecisionManufacturingIcon/>
+                                                <FormatColorFillIcon/>
                                             </div>,
                                             children: <>
                                                 <h1>Стойкость цвета</h1>
-                                                <p>Окрашивание не выгорает, не тускнеет и выдерживает многократные стирки.</p>
+                                                <p>Окрашивание не выгорает, не тускнеет и выдерживает многократные
+                                                    стирки.</p>
                                             </>,
                                         },
                                         {
                                             dot: <div className="pr_s4_icon">
-                                                <PrecisionManufacturingIcon/>
+                                                <BalanceIcon/>
                                             </div>,
                                             children: <>
                                                 <h1>Высокое качество</h1>
@@ -322,16 +335,18 @@ const Production = () => {
                                             </div>,
                                             children: <>
                                                 <h1>Полная свобода</h1>
-                                                <p>Возможна запечатка всей поверхности ткани, даже самых сложных дизайнов.</p>
+                                                <p>Возможна запечатка всей поверхности ткани, даже самых сложных
+                                                    дизайнов.</p>
                                             </>,
                                         },
                                         {
                                             dot: <div className="pr_s4_icon">
-                                                <PrecisionManufacturingIcon/>
+                                                <LocalLaundryServiceIcon/>
                                             </div>,
                                             children: <>
                                                 <h1>Надёжная технология</h1>
-                                                <p>Используем красители от Rudolf, Birkim и Bezema, а также точную рецептуру с лабораторией ATAC.</p>
+                                                <p>Используем красители от Rudolf, Birkim и Bezema, а также точную
+                                                    рецептуру с лабораторией ATAC.</p>
                                             </>,
                                         },
 
@@ -394,23 +409,22 @@ const Production = () => {
                                         <span>Контакты</span>
                                         <h1>Готовы к сотрудничеству? <br/> Обсудим ваш проект!</h1>
                                         <p>
-                                            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim.
+                                            От идеи до реализации, учитывая каждую деталь и ваши пожелания.
                                         </p>
                                     </div>
                                     <div className="contact_content_bottom">
                                         <ul>
                                             <li>
                                                 <LocationOnRoundedIcon/>
-                                                <a href="#">785 15h Street, Office 478 Berlin</a>
+                                                <a href="#">Республика Узбекистан,город Ташкент, Бектемирский р-н, улица Туена 12</a>
                                             </li>
                                             <li>
                                                 <PhoneAndroidRoundedIcon/>
-                                                <a href="#">+998 99 999 99 99</a>
+                                                <a href="tel:+998911629889">(+99891) 162-98-89</a>
                                             </li>
                                             <li>
                                                 <MailOutlineRoundedIcon/>
-                                                <a href="#">Office@office.com</a>
+                                                <a href="mailto:ilxom.mirbabayev@stampa.uz">ilxom.mirbabayev@stampa.uz</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -419,30 +433,18 @@ const Production = () => {
                             <div className="col-lg-6">
                                 <div className="contact_form">
                                     <div className="row">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-12">
                                             <div className="input">
                                                 <PersonOutlineSharpIcon/>
-                                                <input type="text" placeholder={"Name"}/>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="input">
-                                                <EmailOutlinedIcon/>
-                                                <input type="email" placeholder={"Email Address"}/>
+                                                <input type="text" placeholder={"Имя"}/>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row" style={{marginTop: "30px"}}>
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-12">
                                             <div className="input">
                                                 <PhoneInTalkOutlinedIcon/>
-                                                <input type="tel" placeholder={"Phone"}/>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="input">
-                                                <ErrorOutlineOutlinedIcon/>
-                                                <input type="text" placeholder={"Subject"}/>
+                                                <input type="tel" placeholder={"Телефон"}/>
                                             </div>
                                         </div>
                                     </div>
@@ -453,22 +455,15 @@ const Production = () => {
                                                 <textarea
                                                     rows={3}
                                                     type="text"
-                                                    placeholder={"How can we help you? Feel free to get in touch! "}/>
+                                                    placeholder={"Оставьте заявку — создадим нечто выдающееся вместе!"}/>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="row mt-5 d-flex justify-content-center align-items-center">
-                                        <div className="col-lg-6 col-sm-6 col-md-6">
+                                        <div className="col-lg-12 col-sm-6 col-md-6">
                                             <div className="contact_btn">
-                                                <Link to={"#"}><SendOutlinedIcon/>Get in touch</Link>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 col-sm-6 col-md-6">
-                                            <div
-                                                className="contact_check d-flex justify-content-center align-items-center">
-                                                <input type="checkbox"/>
-                                                <p>I agree with this site's <a href="#">privacy policy</a></p>
+                                                <Link to={"#"}><SendOutlinedIcon/>Свяжитесь</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -482,84 +477,44 @@ const Production = () => {
 
             <section className={"pr_s6"}>
                 <div className="container-sm">
-                    {!mediaQuerySM ?
-                        <div className="row gap-5 ">
-                            <div className="col-lg-2 col-md-3 col-sm-1">
-                                <div className="pr_s6_item">
-                                    <img
-                                        src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                        alt=""/>
-                                </div>
+                    <section className={"home_s9"}>
+                        <div className="home_corusel_wrapper">
+                            <div className="home_corusel">
+                                {Array.from({ length: 2 }).map((_, index) => (
+                                    <React.Fragment key={index}>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_1} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_2} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_3} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_4} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_5} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_6} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_7} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_8} alt="Stamp partnior" />
+                                        </div>
+                                        <div className="home_corusel_item">
+                                            <img src={partnior_9} alt="Stamp partnior" />
+                                        </div>
+                                    </React.Fragment>
+                                ))}
+
                             </div>
-                            <div className="col-lg-2 col-md-3 col-sm-1">
-                                <div className="pr_s6_item">
-                                    <img
-                                        src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                        alt=""/>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-3 col-sm-1">
-                                <div className="pr_s6_item">
-                                    <img
-                                        src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                        alt=""/>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-3 col-sm-1">
-                                <div className="pr_s6_item">
-                                    <img
-                                        src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                        alt=""/>
-                                </div>
-                            </div>
-                        </div> :
-                        <section className={"home_s9"}>
-                            <div className="home_corusel_wrapper">
-                                <div className="home_corusel">
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                    <div className="home_corusel_item">
-                                        <img
-                                            src="https://printy.themerex.net/wp-content/uploads/2023/11/partner-11-copyright.png"
-                                            alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    }
+                        </div>
+                    </section>
 
                 </div>
             </section>

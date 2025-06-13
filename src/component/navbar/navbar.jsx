@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./navbar.css";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logoStamp.png";
 import {Link, useLocation} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/utils/lang/LangContext.jsx";
@@ -56,7 +56,7 @@ const Navbar = () => {
             <div className="nav_full_box container-sm">
                 <div className="nav_top_for_home">
                     <div className="nav_logo">
-                        <img src={"https://printy.themerex.net/wp-content/uploads/2023/10/logo-inverse.png"} alt=""/>
+                        <img src={logo} alt=""/>
                     </div>
                 </div>
                 <div className={`nav_menu ${isMenuOpen ? "open" : ""}`}>
@@ -115,7 +115,7 @@ const Navbar = () => {
                         </Dropdown>
 
                     </div>
-                    <Link to={"#"} className={"nav_end_link"}>Let's talk</Link>
+                    <Link to={CONTACT} className={"nav_end_link"}>Свяжитесь</Link>
                     <div className={`navburger `} style={isMenuOpen ? {color: "white"} : {}} onClick={toggleMenu}>
                         {isMenuOpen ? <CloseOutlined/> : <MenuOutlined/>}
                     </div>

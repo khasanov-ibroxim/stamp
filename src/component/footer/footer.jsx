@@ -19,18 +19,18 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer_item">
-                        <h1>Office</h1>
+                        <h1>локация</h1>
                         <ul>
                             <li>Республика Узбекистан,</li>
                             <li>город Ташкент, Бектемирский р-н,</li>
                             <li> улица Туена 12</li>
                         </ul>
-                        <a href="#" className={"f-email"}>ilxom.mirbabayev@stampa.uz</a><br/>
-                        <a href="#" className={"f-email"}>kuvnakov.laziz@stampa.uz</a><br/>
-                        <a href="#" className={"f-tell"}>(+99891) 162-98-89</a>
+                        <a href="mailto:ilxom.mirbabayev@stampa.uz" className={"f-email"}>ilxom.mirbabayev@stampa.uz</a><br/>
+                        <a href="mailto:kuvnakov.laziz@stampa.uz" className={"f-email"}>kuvnakov.laziz@stampa.uz</a><br/>
+                        <a href="tel:+998911629889" className={"f-tell"}>(+99891) 162-98-89</a>
                     </div>
                     <div className="footer_item">
-                        <h1>Links</h1>
+                        <h1>Ссылки</h1>
                         <ul>
                             <li><Link to={"#"}>Главная</Link></li>
                             <li><Link to={"#"}>О нас</Link></li>
@@ -38,7 +38,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer_item">
-                        <h1>Get in Touch</h1>
+                        <h1>Связаться с нами</h1>
                         <ol>
                             <li><Link to={"#"}><TelegramIcon/></Link></li>
                             <li><Link to={"#"}><InstagramIcon/></Link></li>

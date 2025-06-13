@@ -429,47 +429,6 @@ const Home = ({options = {}}) => {
                                 <h1>Наши клиенты — наш голос. <br/>
                                     Они уже выбрали качество, теперь говорят о нём.
                                 </h1>
-                                <div className="home_s5_item_content">
-                                    <div className="home_s5_profile">
-                                        <img src={s5_1} alt=""/>
-                                    </div>
-                                    <div className="home_s5_profile_content">
-                                        <h3>April Robinson</h3>
-                                        <p>Client</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="home_s5_item">
-                                <h1>Наши клиенты — наш голос. <br/>
-                                    Они уже выбрали качество, теперь говорят о нём.
-                                </h1>
-                                <div className="home_s5_item_content">
-                                    <div className="home_s5_profile">
-                                        <img src={s5_2} alt=""/>
-                                    </div>
-                                    <div className="home_s5_profile_content">
-                                        <h3>April Robinson</h3>
-                                        <p>Client</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="home_s5_item">
-                                <h1>Наши клиенты — наш голос. <br/>
-                                    Они уже выбрали качество, теперь говорят о нём.
-                                </h1>
-                                <div className="home_s5_item_content">
-                                    <div className="home_s5_profile">
-                                        <img src={s5_3} alt=""/>
-                                    </div>
-                                    <div className="home_s5_profile_content">
-                                        <h3>April Robinson</h3>
-                                        <p>Client</p>
-                                    </div>
-                                </div>
                             </div>
                         </SwiperSlide>
 
