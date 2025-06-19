@@ -22,9 +22,13 @@ import s4_5 from "@/assets/home/s4/portfolio-21-copyright.jpg"
 import s4_6 from "@/assets/home/s4/portfolio-22-copyright.jpg"
 
 
-import s5_1 from "@/assets/home/s5/testi-10-copyright.jpg"
-import s5_2 from "@/assets/home/s5/testi-11-copyright.jpg"
-import s5_3 from "@/assets/home/s5/testi-12-copyright.jpg"
+import bl from "@/assets/home/s5/bl.png"
+import kz from "@/assets/home/s5/kz.png"
+import pl from "@/assets/home/s5/pl.png"
+import ru from "@/assets/home/s5/ru.png"
+import tj from "@/assets/home/s5/tj.png"
+import tr from "@/assets/home/s5/tr.png"
+import turkey from "@/assets/home/s5/turkey.png"
 
 import s7_1 from "@/assets/home/s7/img-17-copyright.jpg"
 import s7_2 from "@/assets/home/s7/img-19-copyright.jpg"
@@ -72,103 +76,108 @@ const Home = ({options = {}}) => {
         {
             key: 1,
             label: "Разработка дизайна",
-            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные решения.</p>
+            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные
+                решения.</p>
         },
         {
             key: 2,
             label: "Создание принтов",
-            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения — от креатива до текстуры.</p>
+            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения —
+                от креатива до текстуры.</p>
         },
         {
             key: 3,
             label: "Контроль качества и логистика",
-            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему Узбекистану.</p>
+            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему
+                Узбекистану.</p>
         },
     ];
     const items = [
         {
             id: 1,
-            name: "Rennie Blare",
+            name: "Россия",
             location: "Pasadena, CA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat lacus ut.",
+            content: "Отличное полотно — плотное, приятное на ощупь. Принт яркий, чёткий, не тускнеет!",
             date: "Nov 24, 2023",
-            img: s5_1
+            img: ru
         },
         {
             id: 2,
-            name: "Brian Jones",
+            name: "Беларусь",
             location: "Ferndale, CA",
-            content: "Suspendisse non volutpat mauris. Suspendisse a lectus ut ligula luctus porttitor. Nullam odio urna, consectetur non rutrum ac, maximus eu orci. Phasellus facilisis libero vitae iaculis scelerisque.",
+            content: "Очень довольна! Полотно гладкое, без дефектов, принт чёткий и аккуратный. Все сделано с душой — ткань качественная, принт стойкий. Получила посылку — в восторге от текстиля и рисунка. Приятно держать в руках!",
             date: "Nov 24, 2023",
-            img: s5_2
+            img: bl
         },
 
         {
             id: 3,
-            name: "Rennie Blare",
+            name: "Казахстан",
             location: "Pasadena, CA",
-            content: "Maecenas pretium eget metus in sodales. Vestibulum cursus viverra viverra. Aenean sed sagittis risus. Class aptent taciti sociosqu.",
+            content: "Красота и качество! Принт живой, ткань плотная, не просвечивает. Оттенки насыщенные, ткань отличная.",
             date: "Nov 24, 2023",
-            img: s5_3
+            img: kz
         },
         {
             id: 4,
-            name: "Brian Jones",
+            name: "Польша",
             location: "Ferndale, CA",
-            content: "Nullam at nulla ipsum. Suspendisse ornare id tortor id gravida. Vestibulum id urna ut ligula tempor commodo. Duis euismod arcu eu erat vehicula tempus. Pellentesque sed mi vel sapien vulputate.",
+            content: `Отличное качество материала и принта. Ткань мягкая и прочная.
+Очень довольна! Всё как на фото, даже лучше. Цвета насыщенные, а материал действительно добротный. Спасибо!
+`,
             date: "Nov 24, 2023",
-            img: s5_2
+            img: pl
         },
 
         {
             id: 5,
-            name: "Rennie Blare",
+            name: "Туркменистан",
             location: "Pasadena, CA",
-            content: "Nullam at nulla ipsum. Suspendisse ornare id tortor id gravida. Vestibulum id urna ut ligula tempor commodo. Duis euismod arcu eu erat vehicula tempus. Pellentesque sed mi vel sapien vulputate dignissim.",
+            content: `Ткань просто превосходная — плотная, ровная, очень приятная на ощупь. Принт выглядит ярко и чётко, как на картинке. Даже после стирки всё остаётся без изменений.`,
             date: "Nov 24, 2023",
-            img: s5_1
+            img: tr
         },
         {
             id: 6,
-            name: "Brian Jones",
+            name: "Россия",
             location: "Ferndale, CA",
-            content: "Curabitur consectetur, dolor a eleifend posuere, magna enim aliquam nisl, sed laoreet quam ante a augue. Fusce ut dictum lorem, in tempor eros. Maecenas posuere id ligula eu placerat.",
+            content: "Очень порадовало качество исполнения. Цвета насыщенные, ничего не выцветает. Приятно удивлена такой стойкостью рисунка.",
             date: "Nov 24, 2023",
-            img: s5_2
+            img:ru
         },
 
         {
             id: 7,
-            name: "Rennie Blare",
+            name: "Турция",
             location: "Pasadena, CA",
-            content: "Mauris varius porta sem, sit amet commodo quam fringilla ut. Nulla cursus arcu in tellus luctus tempus. Sed tincidunt ex sit amet augue iaculis, condimentum vulputate felis fermentum.",
+            content: "Полотно хорошего качества, без запаха и дефектов. Принт напечатан аккуратно, линии чёткие. Видно, что сделано с вниманием к деталям.",
             date: "Nov 24, 2023",
-            img: s5_3
+            img: turkey
         },
         {
             id: 8,
-            name: "Brian Jones",
+            name: "Таджикистан",
             location: "Ferndale, CA",
-            content: "Phasellus risus metus, mattis in tincidunt non, consectetur efficitur lorem. Ut finibus nibh vel sapien feugiat convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            content: "Заказываю уже не в первый раз — и всегда на высоте. Принт никогда не трескается, не стирается. Ткань остаётся как новая даже после нескольких стирок.",
             date: "Nov 24, 2023",
-            img: s5_2
+            img: tj
         },
 
         {
             id: 9,
-            name: "Rennie Blare",
+            name: "Россия",
             location: "Pasadena, CA",
-            content: "Mauris consectetur mauris vel mattis tristique. Vestibulum semper nulla sed metus interdum, in mollis urna aliquam.",
+            content: "Очень довольна заказом. Всё соответствует описанию, качество отличное.",
             date: "Nov 24, 2023",
-            img: s5_1
+            img: ru
         },
         {
             id: 10,
-            name: "Brian Jones",
+            name: "Беларусь",
             location: "Ferndale, CA",
-            content: "Nunc fringilla mi vitae quam finibus sollicitudin. Duis cursus felis mi, et pretium neque mattis eu.",
+            content: "Приятная на ощупь ткань и стойкий принт. Обязательно закажу ещё!",
             date: "Nov 24, 2023",
-            img: s5_3
+            img: bl
         },
 
     ];
@@ -245,7 +254,7 @@ const Home = ({options = {}}) => {
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <AllInboxIcon/>
-                                <p> Тканевая  <br/> основа</p>
+                                <p> Тканевая <br/> основа</p>
                             </div>
                         </div>
                     </div>
@@ -253,25 +262,25 @@ const Home = ({options = {}}) => {
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SellIcon/>
-                                <p>Промышленная   <br/> стойкость</p>
+                                <p>Промышленная <br/> стойкость</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Фотореалистичная  <br/> точность</p>
+                                <p>Фотореалистичная <br/> точность</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Безопасность  <br/> материалов</p>
+                                <p>Безопасность <br/> материалов</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <SignpostIcon/>
-                                <p>Гибкость  <br/> тиражей </p>
+                                <p>Гибкость <br/> тиражей </p>
                             </div>
                         </div>
                     </div>
@@ -296,7 +305,8 @@ const Home = ({options = {}}) => {
                             <div className="home_s2_text_content">
                                 <span>Уникальный принт</span>
                                 <h1>Персонально. Точно. Экологично.</h1>
-                                <p>Мы создаём печать, отражающую ваш стиль, идею и характер — точно, ярко и экологично.</p>
+                                <p>Мы создаём печать, отражающую ваш стиль, идею и характер — точно, ярко и
+                                    экологично.</p>
                                 <Link to={"#"}>Услуги</Link>
                             </div>
                         </div>
@@ -446,12 +456,12 @@ const Home = ({options = {}}) => {
                                     <div className="home_s6_item_img"><img src={item.img} alt=""/></div>
                                     <div className="home_s6_item_top_info">
                                         <h2>{item.name}</h2>
-                                        <p>{item.location}</p>
+
                                     </div>
                                 </div>
                                 <div className="home_s6_item_bottom">
                                     <p>{item.content}</p>
-                                    <span>{item.date}</span>
+
                                 </div>
                             </div>
                         ))}
@@ -557,34 +567,34 @@ const Home = ({options = {}}) => {
             <section className={"home_s9"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        {Array.from({ length: 2 }).map((_, index) => (
+                        {Array.from({length: 2}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_1} alt="Stamp partnior" />
+                                    <img src={partnior_1} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_2} alt="Stamp partnior" />
+                                    <img src={partnior_2} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_3} alt="Stamp partnior" />
+                                    <img src={partnior_3} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_4} alt="Stamp partnior" />
+                                    <img src={partnior_4} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_5} alt="Stamp partnior" />
+                                    <img src={partnior_5} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_6} alt="Stamp partnior" />
+                                    <img src={partnior_6} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_7} alt="Stamp partnior" />
+                                    <img src={partnior_7} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_8} alt="Stamp partnior" />
+                                    <img src={partnior_8} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_9} alt="Stamp partnior" />
+                                    <img src={partnior_9} alt="Stamp partnior"/>
                                 </div>
                             </React.Fragment>
                         ))}

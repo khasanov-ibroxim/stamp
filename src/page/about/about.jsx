@@ -19,11 +19,8 @@ import s5_1 from "@/assets/about/s5/s5_1.jpg"
 import s5_2 from "@/assets/about/s5/s5_2.jpg"
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Pagination} from "swiper/modules";
-import s5_3 from "@/assets/home/s5/testi-12-copyright.jpg";
 
-import s6_1 from "@/assets/home/s5/testi-10-copyright.jpg"
-import s6_2 from "@/assets/home/s5/testi-11-copyright.jpg"
-import s6_3 from "@/assets/home/s5/testi-12-copyright.jpg"
+
 import {Collapse} from "antd";
 import {CloseOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
 import s8_1 from "@/assets/home/s8/img-18-copyright.png";

@@ -130,7 +130,7 @@ const Production = () => {
             <section className="pr_s2 cursor_left_right">
                 <div className="container-sm">
                     <div className="pr_s2_top">
-                        <span>Предпочтение</span>
+                        <span>Топ заказы</span>
                         <h1 style={{textAlign: "center"}}>Выбирают чаще всего — за качество, стиль и точность
                             исполнения</h1>
                     </div>
@@ -270,13 +270,10 @@ const Production = () => {
                         {Array.from({length: 2}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
-                                    Печать & Дизайн
+                                    Печать
                                 </div>
                                 <div className="home_corusel_item">
-                                    Цвет
-                                </div>
-                                <div className="home_corusel_item">
-                                    Стиль
+                                    Крашение
                                 </div>
                             </React.Fragment>
                         ))}
