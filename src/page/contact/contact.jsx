@@ -12,11 +12,12 @@ import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import {Link} from "react-router-dom";
 import Footer from "@/component/footer/footer.jsx";
+import header_img from "@/assets/headers/2O8A5113.jpg";
 
 const Contact = () => {
     return (
         <div>
-            <div className="about_header">
+            <div className="about_header" style={{background:`url(${header_img}) center center` , backgroundSize:"cover"}}>
                 <h1>Контакты</h1>
             </div>
             <section className={"contact"}>

@@ -11,15 +11,17 @@ import {Link} from "react-router-dom";
 
 const {Panel} = Collapse;
 
-import home_s2_helper from "@/assets/home/s2/img-18-copyright-730x734.png"
-import home_s2_index from "@/assets/home/s2/img-15-copyright.jpg"
+import home_s2_helper from "@/assets/home/s2/2O8A5137.jpg"
+import home_s2_index from "@/assets/home/s2/2O8A5089.jpg"
 
-import s4_1 from "@/assets/home/s4/portfolio-17-copyright.jpg"
-import s4_2 from "@/assets/home/s4/portfolio-18-copyright.jpg"
-import s4_3 from "@/assets/home/s4/portfolio-19-copyright.jpg"
-import s4_4 from "@/assets/home/s4/portfolio-20-copyright.jpg"
-import s4_5 from "@/assets/home/s4/portfolio-21-copyright.jpg"
-import s4_6 from "@/assets/home/s4/portfolio-22-copyright.jpg"
+import s4_1 from "@/assets/home/s4/2O8A5135.jpg"
+import s4_2 from "@/assets/home/s4/2O8A5136.jpg"
+import s4_3 from "@/assets/home/s4/2O8A5139.jpg"
+import s4_4 from "@/assets/home/s4/2O8A5140.jpg"
+import s4_5 from "@/assets/home/s4/2O8A5141.jpg"
+import s4_6 from "@/assets/home/s4/2O8A5146.jpg"
+import s4_7 from "@/assets/home/s4/2O8A5148.jpg"
+import s4_8 from "@/assets/home/s4/2O8A5153.jpg"
 
 
 import bl from "@/assets/home/s5/bl.png"
@@ -30,10 +32,10 @@ import tj from "@/assets/home/s5/tj.png"
 import tr from "@/assets/home/s5/tr.png"
 import turkey from "@/assets/home/s5/turkey.png"
 
-import s7_1 from "@/assets/home/s7/img-17-copyright.jpg"
-import s7_2 from "@/assets/home/s7/img-19-copyright.jpg"
+import s7_1 from "@/assets/home/s7/2O8A4974.jpg"
+import s7_2 from "@/assets/home/s7/2O8A4974.jpg"
 
-import s8_1 from "@/assets/home/s8/img-18-copyright.png"
+import s8_1 from "@/assets/home/s8/2O8A4739.jpg"
 
 import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png"
 import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png"
@@ -293,9 +295,9 @@ const Home = ({options = {}}) => {
                             <div className="home_s2_item_1">
 
                                 <div className="home_s2_index_element">
-                                    <img src={home_s2_index} alt=""/>
+                                    <img src={home_s2_index} alt="" />
                                     <div className="home_s2_index_hleper">
-                                        <img src={home_s2_helper} alt=""/>
+                                        <img src={home_s2_helper} alt="" style={{objectFit:"cover"}}/>
                                     </div>
                                 </div>
 
@@ -413,6 +415,30 @@ const Home = ({options = {}}) => {
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_6} alt=""/>
+                            <Link className="home_s4_text" to={"#"}>
+                                <span>IDEAS</span>
+                                <div className="home_s4_content">
+                                    <h3>Banners & ads</h3>
+                                    <ArrowOutwardIcon/>
+                                </div>
+                            </Link>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home_s4_item">
+                            <img src={s4_7} alt=""/>
+                            <Link className="home_s4_text" to={"#"}>
+                                <span>IDEAS</span>
+                                <div className="home_s4_content">
+                                    <h3>Banners & ads</h3>
+                                    <ArrowOutwardIcon/>
+                                </div>
+                            </Link>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home_s4_item">
+                            <img src={s4_8} alt=""/>
                             <Link className="home_s4_text" to={"#"}>
                                 <span>IDEAS</span>
                                 <div className="home_s4_content">

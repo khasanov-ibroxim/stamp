@@ -13,17 +13,17 @@ import Footer from "@/component/footer/footer.jsx";
 const {Panel} = Collapse;
 
 
-import s3_1 from "@/assets/about/s3/s3_1.png"
+import s3_1 from "@/assets/about/s3/2O8A5077.jpg"
 
-import s5_1 from "@/assets/about/s5/s5_1.jpg"
-import s5_2 from "@/assets/about/s5/s5_2.jpg"
+import s5_1 from "@/assets/about/s5/2O8A5159.jpg"
+import s5_2 from "@/assets/about/s5/2O8A5033.jpg"
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Pagination} from "swiper/modules";
 
 
 import {Collapse} from "antd";
 import {CloseOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
-import s8_1 from "@/assets/home/s8/img-18-copyright.png";
+import s8_1 from "@/assets/about/2O8A5042.jpg";
 import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png";
 import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png";
 import partnior_3 from "@/assets/home/partnior/logo_Mersan-150x49-1.png";
@@ -33,6 +33,7 @@ import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png";
 import partnior_7 from "@/assets/home/partnior/part1.png";
 import partnior_8 from "@/assets/home/partnior/part2.png";
 import partnior_9 from "@/assets/home/partnior/part3.png";
+import header_img from "@/assets/headers/2O8A4752.jpg";
 
 
 const About = ({options = {}}) => {
@@ -70,7 +71,7 @@ const About = ({options = {}}) => {
     }, [options]);
     return (
         <div>
-            <div className="about_header">
+            <div className="about_header" style={{background:`url(${header_img}) center center` , backgroundSize:"cover"}}>
                 <h1>О нас</h1>
             </div>
 
