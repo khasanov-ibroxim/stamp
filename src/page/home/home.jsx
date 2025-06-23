@@ -11,17 +11,17 @@ import {Link} from "react-router-dom";
 
 const {Panel} = Collapse;
 
-import home_s2_helper from "@/assets/home/s2/2O8A5137.jpg"
-import home_s2_index from "@/assets/home/s2/2O8A5089.jpg"
+import home_s2_helper from "@/assets/home/s2/2O8A5137.JPG"
+import home_s2_index from "@/assets/home/s2/2O8A5089.JPG"
 
-import s4_1 from "@/assets/home/s4/2O8A5135.jpg"
-import s4_2 from "@/assets/home/s4/2O8A5136.jpg"
-import s4_3 from "@/assets/home/s4/2O8A5139.jpg"
-import s4_4 from "@/assets/home/s4/2O8A5140.jpg"
-import s4_5 from "@/assets/home/s4/2O8A5141.jpg"
-import s4_6 from "@/assets/home/s4/2O8A5146.jpg"
-import s4_7 from "@/assets/home/s4/2O8A5148.jpg"
-import s4_8 from "@/assets/home/s4/2O8A5153.jpg"
+import s4_1 from "@/assets/home/s4/2O8A5135.JPG"
+import s4_2 from "@/assets/home/s4/2O8A5136.JPG"
+import s4_3 from "@/assets/home/s4/2O8A5139.JPG"
+import s4_4 from "@/assets/home/s4/2O8A5140.JPG"
+import s4_5 from "@/assets/home/s4/2O8A5141.JPG"
+import s4_6 from "@/assets/home/s4/2O8A5146.JPG"
+import s4_7 from "@/assets/home/s4/2O8A5148.JPG"
+import s4_8 from "@/assets/home/s4/2O8A5153.JPG"
 
 
 import bl from "@/assets/home/s5/bl.png"
@@ -32,10 +32,10 @@ import tj from "@/assets/home/s5/tj.png"
 import tr from "@/assets/home/s5/tr.png"
 import turkey from "@/assets/home/s5/turkey.png"
 
-import s7_1 from "@/assets/home/s7/2O8A4974.jpg"
-import s7_2 from "@/assets/home/s7/2O8A4974.jpg"
+import s7_1 from "@/assets/home/s7/2O8A4974.JPG"
+import s7_2 from "@/assets/home/s7/2O8A4974.JPG"
 
-import s8_1 from "@/assets/home/s8/2O8A4739.jpg"
+import s8_1 from "@/assets/home/s8/2O8A4739.JPG"
 
 import partnior_1 from "@/assets/home/partnior/logo_BRKM-150x52-1.png"
 import partnior_2 from "@/assets/home/partnior/logo_dilmenler-150x29-1.png"

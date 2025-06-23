@@ -7,19 +7,19 @@ import {Link} from "react-router-dom";
 import {ABOUT} from "@/utils/const.jsx";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
-import header_img from "@/assets/headers/2O8A5037.jpg"
-import s1_1 from "@/assets/production/s1/2O8A4973.jpg"
+import header_img from "@/assets/headers/2O8A5037.JPG"
+import s1_1 from "@/assets/production/s1/2O8A4973.JPG"
 import s1_icon from "@/assets/production/s1/icon.svg"
 import s1_about from "@/assets/production/s1/about-us.svg"
 
-import s2_1 from "@/assets/production/s2/2O8A5147.jpg"
-import s2_2 from "@/assets/production/s2/2O8A5149.jpg"
-import s2_3 from "@/assets/production/s2/2O8A5152.jpg"
+import s2_1 from "@/assets/production/s2/2O8A5147.JPG"
+import s2_2 from "@/assets/production/s2/2O8A5149.JPG"
+import s2_3 from "@/assets/production/s2/2O8A5152.JPG"
 
-import s5_1 from "@/assets/production/s5/2O8A4744.jpg"
-import s5_2 from "@/assets/production/s5/2O8A4752.jpg"
-import s5_3 from "@/assets/production/s5/2O8A4759.jpg"
-import s5_4 from "@/assets/production/s5/2O8A4998.jpg"
+import s5_1 from "@/assets/production/s5/2O8A4744.JPG"
+import s5_2 from "@/assets/production/s5/2O8A4752.JPG"
+import s5_3 from "@/assets/production/s5/2O8A4759.JPG"
+import s5_4 from "@/assets/production/s5/2O8A4998.JPG"
 
 import EastIcon from '@mui/icons-material/East';
 import {Timeline, Affix} from 'antd';

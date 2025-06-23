@@ -4,6 +4,8 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  assetsInclude: ['**/*.JPG'], // .JPG fayllar ruxsat etiladi
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
