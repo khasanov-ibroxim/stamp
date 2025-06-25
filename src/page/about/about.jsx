@@ -15,8 +15,8 @@ const {Panel} = Collapse;
 
 import s3_1 from "@/assets/about/s3/2O8A5077.JPG"
 
-import s5_1 from "@/assets/about/s5/2O8A5159.JPG"
-import s5_2 from "@/assets/about/s5/2O8A5033.JPG"
+import s5_1 from "@/assets/about/s5/2O8A4820.jpg"
+import s5_2 from "@/assets/about/s5/2O8A4911.jpg"
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Pagination} from "swiper/modules";
 
@@ -33,14 +33,19 @@ import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png";
 import partnior_7 from "@/assets/home/partnior/part1.png";
 import partnior_8 from "@/assets/home/partnior/part2.png";
 import partnior_9 from "@/assets/home/partnior/part3.png";
-import header_img from "@/assets/headers/2O8A4752.JPG";
+
+import header_1 from "@/assets/headers/2O8A4752.JPG";
+import header_2 from "@/assets/headers/2O8A4739_about.jpg";
+
 
 
 const About = ({options = {}}) => {
     const tiltRef = useRef(null);
     const [activeKey, setActiveKey] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-
+    const images = [header_1 , header_2 ];
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(true);
     const itemFAQ = [
         {
             key: 1,
@@ -69,9 +74,19 @@ const About = ({options = {}}) => {
             });
         }
     }, [options]);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false); // Yashirish (opacity: 0)
+            setTimeout(() => {
+                setCurrentIndex((prev) => (prev + 1) % images.length);
+                setFade(true); // Ko'rsatish (opacity: 1)
+            }, 1000); // fade chiqib ketishi 0.5s
+        }, 7000);
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div>
-            <div className="about_header" style={{background:`url(${header_img}) center center` , backgroundSize:"cover"}}>
+            <div className={`about_header ${fade ? "fade-in" : "fade-out"}`} style={{background:`url(${images[currentIndex]}) center center` , backgroundSize:"100%"}}>
                 <h1>О нас</h1>
             </div>
 

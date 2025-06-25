@@ -12,16 +12,16 @@ import {Link} from "react-router-dom";
 const {Panel} = Collapse;
 
 import home_s2_helper from "@/assets/home/s2/2O8A5137.JPG"
-import home_s2_index from "@/assets/home/s2/2O8A5089.JPG"
+import home_s2_index from "@/assets/home/s2/2O8A5001_Index.jpg"
 
 import s4_1 from "@/assets/home/s4/2O8A5135.JPG"
-import s4_2 from "@/assets/home/s4/2O8A5136.JPG"
+import s4_2 from "@/assets/home/s4/2O8A5128.JPG"
 import s4_3 from "@/assets/home/s4/2O8A5139.JPG"
-import s4_4 from "@/assets/home/s4/2O8A5140.JPG"
+import s4_4 from "@/assets/home/s4/2O8A5132.JPG"
 import s4_5 from "@/assets/home/s4/2O8A5141.JPG"
-import s4_6 from "@/assets/home/s4/2O8A5146.JPG"
+import s4_6 from "@/assets/home/s4/2O8A5143.JPG"
 import s4_7 from "@/assets/home/s4/2O8A5148.JPG"
-import s4_8 from "@/assets/home/s4/2O8A5153.JPG"
+import s4_8 from "@/assets/home/s4/2O8A5145.JPG"
 
 
 import bl from "@/assets/home/s5/bl.png"
@@ -33,7 +33,7 @@ import tr from "@/assets/home/s5/tr.png"
 import turkey from "@/assets/home/s5/turkey.png"
 
 import s7_1 from "@/assets/home/s7/2O8A4974.JPG"
-import s7_2 from "@/assets/home/s7/2O8A4974.JPG"
+
 
 import s8_1 from "@/assets/home/s8/2O8A4739.JPG"
 
@@ -58,22 +58,20 @@ import Footer_component from "@/component/footer/footer_component.jsx";
 import Footer from "@/component/footer/footer.jsx";
 import VanillaTilt from "vanilla-tilt";
 
+
+import header_1 from "@/assets/home/2O8A5026.JPG"
+import header_2 from "@/assets/home/2O8A5001.jpg"
+import header_3 from "@/assets/home/home_header3.jpg"
+
 const Home = ({options = {}}) => {
     const gridRef = useRef(null);
-    const [isOpen, setIsOpen] = useState(false);
+
     const [activeKey, setActiveKey] = useState(null);
     const tiltRef = useRef(null);
+    const images = [header_1 , header_2 , header_3];
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(true);
 
-    const [playPosition, setPlayPosition] = useState({x: "50%", y: "50%"});
-    const handleMouseMove = (e) => {
-        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
-        const x = ((e.clientX - left) / width) * 100;
-        const y = ((e.clientY - top) / height) * 100;
-        setPlayPosition({x: `${x}%`, y: `${y}%`});
-    };
-    const handleMouseLeave = () => {
-        setPlayPosition({x: "50%", y: "50%"}); // Tugmani yana markazga qaytarish
-    };
     const itemFAQ = [
         {
             key: 1,
@@ -206,11 +204,29 @@ const Home = ({options = {}}) => {
             });
         }
     }, [options]);
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false); // Yashirish (opacity: 0)
+            setTimeout(() => {
+                setCurrentIndex((prev) => (prev + 1) % images.length);
+                setFade(true); // Ko'rsatish (opacity: 1)
+            }, 1000); // fade chiqib ketishi 0.5s
+        }, 7000);
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="home">
 
             <header>
-                <div className="header_img"></div>
+                <div className={"header_opacity"}></div>
+                <div
+                     className={`header_img ${fade ? "fade-in" : "fade-out"}`}
+                     style={{
+                         backgroundImage: `url(${images[currentIndex]})`,
+                     }}
+                ></div>
                 <div className="container-sm">
                     <div className="header_box">
                         <div className="header_top_element">
@@ -496,12 +512,10 @@ const Home = ({options = {}}) => {
                 </div>
             </section>
 
-            <section className={"home_s7"} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+            <section className={"home_s7"} >
                 <div className="container-sm">
-                    <div className="home_s7_box " onClick={() => setIsOpen(true)}>
-                        <div className="home_s7_play" style={{top: playPosition.y, left: playPosition.x}}>
-                            PLAY
-                        </div>
+                    <div className="home_s7_box ">
+
                         <div className="home_s7_opacity"></div>
                         <div className="home_s7_slide">
                             <Swiper
@@ -517,33 +531,13 @@ const Home = ({options = {}}) => {
                                 loop={true} // Slaydlar cheksiz davom etishi uchun
                             >
                                 <SwiperSlide><img src={s7_1} alt=""/></SwiperSlide>
-                                <SwiperSlide><img src={s7_2} alt=""/></SwiperSlide>
+
                             </Swiper>
                         </div>
 
                     </div>
                 </div>
-                {isOpen && (
-                    <div className="home_s7_modal">
-                        <div className="home_s7_modal_content">
-                            <button
-                                className="home_s7_modal_close"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                <CloseOutlined/>
-                            </button>
-                            <iframe
-                                width="70%"
-                                height="70%"
-                                src="https://www.youtube.com/embed/wII9bv2P9c8?autoplay=1&controls=0"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                        </div>
-                    </div>
-                )}
+
             </section>
 
             <section className="home_s8">

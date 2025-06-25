@@ -4,7 +4,9 @@ import {Link} from "react-router-dom";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
+import VK from "./vk.png"
+import {ABOUT, CONTACT, HOME, PRODUCTION} from "@/utils/const.jsx";
 const Footer = () => {
     return (
         <footer>
@@ -32,18 +34,19 @@ const Footer = () => {
                     <div className="footer_item">
                         <h1>Ссылки</h1>
                         <ul>
-                            <li><Link to={"#"}>Главная</Link></li>
-                            <li><Link to={"#"}>О нас</Link></li>
-                            <li><Link to={"#"}>Контакты</Link></li>
+                            <li><Link to={HOME}>Главная</Link></li>
+                            <li><Link to={ABOUT}>О нас</Link></li>
+                            <li><Link to={PRODUCTION}>Производство</Link></li>
+                            <li><Link to={CONTACT}>Контакты</Link></li>
                         </ul>
                     </div>
                     <div className="footer_item">
                         <h1>Связаться с нами</h1>
                         <ol>
-                            <li><Link to={"#"}><TelegramIcon/></Link></li>
-                            <li><Link to={"#"}><InstagramIcon/></Link></li>
-                            <li><Link to={"#"}><FacebookIcon/></Link></li>
-                            <li><Link to={"#"}><WhatsAppIcon/></Link></li>
+                            <li><Link to={"https://t.me/stampatextileuz"}><TelegramIcon/></Link></li>
+                            <li><Link to={"https://www.instagram.com/stampa_textile?igsh=MXdwa3hvM3BnamoydA%3D%3D&utm_source=qr"}><InstagramIcon/></Link></li>
+                            <li><Link to={"https://www.facebook.com/stampatextile/"}><FacebookIcon/></Link></li>
+                            <li><Link to={"https://vk.com/club229633365?from=groups"}><img src={VK} alt={"Stamp"}/></Link></li>
                         </ol>
                     </div>
                 </div>

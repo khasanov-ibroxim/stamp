@@ -2,7 +2,7 @@ import React from 'react';
 import "./footer.css"
 import {Link} from "react-router-dom";
 import TelegramIcon from '@mui/icons-material/Telegram';
-import footer_component_img from "@/assets/2O8A5023.JPG"
+import footer_component_img from "./2O8A5116.jpg"
 
 const FooterComponent = () => {
     return (
