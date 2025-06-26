@@ -52,7 +52,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`${isFixed ? "fixed-navbar" : ""} ${location === "/" ? "Home" : ""}`.trim()}>
+        <nav className={`${isFixed ? "fixed-navbar" : "nav_defolt"} ${location === "/" ? "Home" : ""}`.trim()}>
             <div className="nav_full_box container-sm">
                 <div className="nav_top_for_home">
                     <div className="nav_logo">

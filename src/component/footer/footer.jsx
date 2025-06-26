@@ -32,7 +32,7 @@ const Footer = () => {
                         <a href="tel:+998911629889" className={"f-tell"}>(+99891) 162-98-89</a>
                     </div>
                     <div className="footer_item">
-                        <h1>Ссылки</h1>
+                        <h1>Меню</h1>
                         <ul>
                             <li><Link to={HOME}>Главная</Link></li>
                             <li><Link to={ABOUT}>О нас</Link></li>

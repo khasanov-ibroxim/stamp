@@ -6,7 +6,7 @@ import SignpostIcon from "@mui/icons-material/Signpost";
 import {Link} from "react-router-dom";
 import {ABOUT} from "@/utils/const.jsx";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination} from "swiper/modules";
+import {Autoplay, Pagination} from "swiper/modules";
 import header_img from "@/assets/headers/2O8A5037.JPG"
 import s1_1 from "@/assets/production/s1/2O8A4973.JPG"
 import s1_icon from "@/assets/production/s1/icon.svg"
@@ -55,7 +55,16 @@ const Production = () => {
 
     return (
         <div>
-            <div className="about_header" style={{background:`url(${header_img}) center center` , backgroundSize:"cover"}}>
+
+            <div className={`about_header `}>
+                <div className="about_header_opacity"></div>
+                <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"about_swiper"}>
+
+                        <SwiperSlide>
+                            <img src={header_img} alt=""/>
+                        </SwiperSlide>
+
+                </Swiper>
                 <h1>Наши услуги</h1>
             </div>
             <section className="home_s1">

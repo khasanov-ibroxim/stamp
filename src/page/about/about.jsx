@@ -18,7 +18,7 @@ import s3_1 from "@/assets/about/s3/2O8A5077.JPG"
 import s5_1 from "@/assets/about/s5/2O8A4820.jpg"
 import s5_2 from "@/assets/about/s5/2O8A4911.jpg"
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination} from "swiper/modules";
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 
 import {Collapse} from "antd";
@@ -88,10 +88,18 @@ const About = ({options = {}}) => {
     }, []);
     return (
         <div>
-            <div className={`about_header ${fade ? "fade-in" : "fade-out"}`}
-                 style={{background: `url(${images[currentIndex]}) center center`, backgroundSize: "100%"}}>
+            <div className={`about_header `}>
+                <div className="about_header_opacity"></div>
+                <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"about_swiper"}>
+                    {images.map((item , index)=>(
+                        <SwiperSlide>
+                            <img src={item} alt=""/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
                 <h1>О нас</h1>
             </div>
+
 
             <section className="about_s1">
                 <div className="container-sm">

@@ -130,10 +130,12 @@ footer{
 .footer_item .f-tell{
     color: white;
     font-size: 22px;
+    text-decoration: none;
 }
 .footer_item .f-email{
     font-size: 19px;
-    border-bottom: 1px solid white;
+  
+    text-decoration: none;
 }
 
 @media screen and (max-width: 500px){

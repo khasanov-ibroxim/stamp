@@ -208,25 +208,26 @@ const Home = ({options = {}}) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setFade(false); // Yashirish (opacity: 0)
-            setTimeout(() => {
-                setCurrentIndex((prev) => (prev + 1) % images.length);
-                setFade(true); // Ko'rsatish (opacity: 1)
-            }, 1000); // fade chiqib ketishi 0.5s
-        }, 7000);
+            setCurrentIndex((prev) => (prev + 1) % images.length);
+        }, 4000); // 4s da o'zgaradi
         return () => clearInterval(interval);
     }, []);
+
     return (
         <div className="home">
 
             <header>
                 <div className={"header_opacity"}></div>
-                <div
-                     className={`header_img ${fade ? "fade-in" : "fade-out"}`}
-                     style={{
-                         backgroundImage: `url(${images[currentIndex]})`,
-                     }}
-                ></div>
+
+                <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"home_swiper"}>
+                    {images.map((item , index)=>(
+                        <SwiperSlide>
+                            <img src={item} alt=""/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+
                 <div className="container-sm">
                     <div className="header_box">
                         <div className="header_top_element">
