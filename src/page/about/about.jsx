@@ -38,29 +38,31 @@ import header_1 from "@/assets/headers/2O8A4752.JPG";
 import header_2 from "@/assets/headers/2O8A4739_about.jpg";
 
 
-
 const About = ({options = {}}) => {
     const tiltRef = useRef(null);
     const [activeKey, setActiveKey] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-    const images = [header_1 , header_2 ];
+    const images = [header_1, header_2];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(true);
     const itemFAQ = [
         {
             key: 1,
             label: "Разработка дизайна",
-            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные решения.</p>
+            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные
+                решения.</p>
         },
         {
             key: 2,
             label: "Создание принтов",
-            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения — от креатива до текстуры.</p>
+            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения —
+                от креатива до текстуры.</p>
         },
         {
             key: 3,
             label: "Контроль качества и логистика",
-            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему Узбекистану.</p>
+            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему
+                Узбекистану.</p>
         },
     ];
     useEffect(() => {
@@ -86,7 +88,8 @@ const About = ({options = {}}) => {
     }, []);
     return (
         <div>
-            <div className={`about_header ${fade ? "fade-in" : "fade-out"}`} style={{background:`url(${images[currentIndex]}) center center` , backgroundSize:"100%"}}>
+            <div className={`about_header ${fade ? "fade-in" : "fade-out"}`}
+                 style={{background: `url(${images[currentIndex]}) center center`, backgroundSize: "100%"}}>
                 <h1>О нас</h1>
             </div>
 
@@ -184,7 +187,7 @@ const About = ({options = {}}) => {
             <section className="about_s4">
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        {Array.from({ length: 2 }).map((_, index) => (
+                        {Array.from({length: 2}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
                                     Печать & Дизайн
@@ -207,8 +210,8 @@ const About = ({options = {}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="about_s5_left_top">
-                                <span>Что мы делаем</span>
-                                <h1>Поднимаем ваш бренд через качественную печать на тканях</h1>
+                                <span>Лаборатория</span>
+                                <h1>Контроль на каждом этапе</h1>
                             </div>
                             <div className="about_s5_left_bottom">
                                 <img src={s5_1} alt=""/>
@@ -220,11 +223,10 @@ const About = ({options = {}}) => {
                                     <img src={s5_2} alt=""/>
                                 </div>
                                 <div className="about_s5_right_bottom">
-                                    <p>
-                                        Мы превращаем ткань в визуальное заявление и создаём текстиль, который говорит за вас.
-                                        Ваш стиль — наша печать: делаем ваш текстиль лицом бренда.
-
-                                    </p>
+                                    <p>Наша лаборатория — это сердце производственного процесса, где тестируются ткани,
+                                        краски и готовая продукция. Мы проверяем стойкость окрашивания, усадку,
+                                        плотность и соответствие цвета, чтобы результат соответствовал самым высоким
+                                        стандартам.</p>
                                 </div>
                             </div>
                         </div>
@@ -306,34 +308,34 @@ const About = ({options = {}}) => {
             <section className={"home_s9"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        {Array.from({ length: 2 }).map((_, index) => (
+                        {Array.from({length: 2}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_1} alt="Stamp partnior" />
+                                    <img src={partnior_1} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_2} alt="Stamp partnior" />
+                                    <img src={partnior_2} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_3} alt="Stamp partnior" />
+                                    <img src={partnior_3} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_4} alt="Stamp partnior" />
+                                    <img src={partnior_4} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_5} alt="Stamp partnior" />
+                                    <img src={partnior_5} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_6} alt="Stamp partnior" />
+                                    <img src={partnior_6} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_7} alt="Stamp partnior" />
+                                    <img src={partnior_7} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_8} alt="Stamp partnior" />
+                                    <img src={partnior_8} alt="Stamp partnior"/>
                                 </div>
                                 <div className="home_corusel_item">
-                                    <img src={partnior_9} alt="Stamp partnior" />
+                                    <img src={partnior_9} alt="Stamp partnior"/>
                                 </div>
                             </React.Fragment>
                         ))}

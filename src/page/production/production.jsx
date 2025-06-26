@@ -360,37 +360,24 @@ const Production = () => {
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
                                     <img src={s5_1} alt=""/>
-                                    <div className="pr_s5_item_text">
-                                        <h1>Magazines & Catalogs</h1>
-                                        <p>Prints</p>
-                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
                                     <img src={s5_2} alt=""/>
-                                    <div className="pr_s5_item_text">
-                                        <h1>Magazines & Catalogs</h1>
-                                        <p>Prints</p>
-                                    </div>
+
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
                                     <img src={s5_3} alt=""/>
-                                    <div className="pr_s5_item_text">
-                                        <h1>Magazines & Catalogs</h1>
-                                        <p>Prints</p>
-                                    </div>
+
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
                                     <img src={s5_4} alt=""/>
-                                    <div className="pr_s5_item_text">
-                                        <h1>Magazines & Catalogs</h1>
-                                        <p>Prints</p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
