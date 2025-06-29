@@ -14,7 +14,7 @@ import s1_about from "@/assets/production/s1/about-us.svg"
 
 import s2_1 from "@/assets/production/s2/2O8A5147.JPG"
 import s2_2 from "@/assets/production/s2/2O8A5149.JPG"
-import s2_3 from "@/assets/production/s2/2O8A5152.JPG"
+import s2_3 from "@/assets/production/s2/2O8A5141.JPG"
 
 import s5_1 from "@/assets/production/s5/2O8A4744.JPG"
 import s5_2 from "@/assets/production/s5/2O8A4752.JPG"
@@ -22,7 +22,7 @@ import s5_3 from "@/assets/production/s5/2O8A4759.JPG"
 import s5_4 from "@/assets/production/s5/2O8A4998.JPG"
 
 import EastIcon from '@mui/icons-material/East';
-import {Timeline, Affix} from 'antd';
+import {Timeline, Affix ,Image} from 'antd';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import {useMediaQuery} from "@mui/material";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
@@ -368,25 +368,24 @@ const Production = () => {
                         <div className="row">
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
-                                    <img src={s5_1} alt=""/>
+                                    <Image src={s5_1}/>
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
-                                    <img src={s5_2} alt=""/>
+                                    <Image src={s5_2} alt=""/>
 
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
-                                    <img src={s5_3} alt=""/>
+                                    <Image src={s5_3} alt=""/>
 
                                 </div>
                             </div>
                             <div className="col-lg-3">
                                 <div className="pr_s5_item">
-                                    <img src={s5_4} alt=""/>
-
+                                    <Image src={s5_4} alt=""/>
                                 </div>
                             </div>
                         </div>
