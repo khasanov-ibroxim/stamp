@@ -365,30 +365,32 @@ const Production = () => {
 
                 <section className={"pr_s5"}>
                     <div className="container-sm">
-                        <div className="row">
-                            <div className="col-lg-3">
-                                <div className="pr_s5_item">
-                                    <Image src={s5_1}/>
+                        <Image.PreviewGroup>
+                            <div className="row">
+                                <div className="col-lg-3">
+                                    <div className="pr_s5_item">
+                                        <Image src={s5_1}/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="pr_s5_item">
-                                    <Image src={s5_2} alt=""/>
+                                <div className="col-lg-3">
+                                    <div className="pr_s5_item">
+                                        <Image src={s5_2} alt=""/>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="pr_s5_item">
-                                    <Image src={s5_3} alt=""/>
+                                <div className="col-lg-3">
+                                    <div className="pr_s5_item">
+                                        <Image src={s5_3} alt=""/>
 
+                                    </div>
+                                </div>
+                                <div className="col-lg-3">
+                                    <div className="pr_s5_item">
+                                        <Image src={s5_4} alt=""/>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
-                                <div className="pr_s5_item">
-                                    <Image src={s5_4} alt=""/>
-                                </div>
-                            </div>
-                        </div>
+                        </Image.PreviewGroup>
                     </div>
                 </section>
 

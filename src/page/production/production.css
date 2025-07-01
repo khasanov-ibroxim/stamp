@@ -10,6 +10,7 @@
     height: 100%;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    object-fit: cover;
 }
 
 .pr_s1_content {
@@ -53,6 +54,7 @@
     width: 100px;
     height: 100px;
     right: -75%;
+    bottom: 50px;
 }
 
 .rotating-text {
