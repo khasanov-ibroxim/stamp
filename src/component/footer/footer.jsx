@@ -13,11 +13,11 @@ const Footer = () => {
             <div className="container-sm">
                 <div className="footer_box">
                     <div className="footer_item">
-                        <h1>Working Hours</h1>
+                        <h1>Часы работы</h1>
                         <ul>
-                            <li>Mon-Fri: 9 AM – 6 PM</li>
-                            <li>Saturday: 9 AM – 4 PM</li>
-                            <li>Sunday: Closed</li>
+                            <li>Пн-Сб с 09:00 до 19:00</li>
+                            <li>Воскресенье выходной</li>
+
                         </ul>
                     </div>
                     <div className="footer_item">

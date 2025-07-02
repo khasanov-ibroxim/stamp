@@ -20,6 +20,10 @@ import s5_1 from "@/assets/production/s5/2O8A4744.JPG"
 import s5_2 from "@/assets/production/s5/2O8A4752.JPG"
 import s5_3 from "@/assets/production/s5/2O8A4759.JPG"
 import s5_4 from "@/assets/production/s5/2O8A4998.JPG"
+import s5_5 from "@/assets/production/s5/2O8A4766.jpg"
+import s5_6 from "@/assets/production/s5/2O8A4783.jpg"
+import s5_7 from "@/assets/production/s5/2O8A4793.jpg"
+import s5_8 from "@/assets/production/s5/2O8A4974.JPG"
 
 import EastIcon from '@mui/icons-material/East';
 import {Timeline, Affix ,Image} from 'antd';
@@ -367,28 +371,66 @@ const Production = () => {
                     <div className="container-sm">
                         <Image.PreviewGroup>
                             <div className="row">
-                                <div className="col-lg-3">
-                                    <div className="pr_s5_item">
-                                        <Image src={s5_1}/>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3">
-                                    <div className="pr_s5_item">
-                                        <Image src={s5_2} alt=""/>
+                                <Swiper slidesPerView={4} spaceBetween={10} modules={[Autoplay]} autoplay={{delay:2000}}>
+                                    <SwiperSlide>
 
-                                    </div>
-                                </div>
-                                <div className="col-lg-3">
-                                    <div className="pr_s5_item">
-                                        <Image src={s5_3} alt=""/>
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_1}/>
+                                            </div>
 
-                                    </div>
-                                </div>
-                                <div className="col-lg-3">
-                                    <div className="pr_s5_item">
-                                        <Image src={s5_4} alt=""/>
-                                    </div>
-                                </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_2}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_3}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_4}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_5}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_6}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_7}/>
+                                            </div>
+
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+
+                                            <div className="pr_s5_item">
+                                                <Image src={s5_8}/>
+                                            </div>
+
+                                    </SwiperSlide>
+
+                                </Swiper>
+
                             </div>
                         </Image.PreviewGroup>
                     </div>

@@ -68,7 +68,40 @@ const Home = ({options = {}}) => {
 
     const [activeKey, setActiveKey] = useState(null);
     const tiltRef = useRef(null);
-    const images = [header_1 , header_2 , header_3];
+    const images = [
+        {
+            img_path: header_2,
+            h1: "Совершенство ",
+            h2: "Цвет Текстура",
+            p: `
+                                                Откройте для себя экологически чистую печать на тканях с промышленным качеством
+                                                — <br/>
+                                                сочные цвета, точные детали и забота о планете в каждом отпечатке.
+                                            `
+        },
+        {
+            img_path: header_3,
+            h1: "Совершенное  ",
+            h2: " крашение тканей",
+            p: `
+                                                Откройте для себя экологически чистую печать на тканях с промышленным качеством
+                                                — <br/>
+                                                сочные цвета, точные детали и забота о планете в каждом отпечатке.
+                                            `
+        },
+        {
+            img_path: header_1,
+            h1: "Цифровая печать",
+            h2: "нового поколения",
+            p: `
+                                                Откройте для себя экологически чистую печать на тканях с промышленным качеством
+                                                — <br/>
+                                                сочные цвета, точные детали и забота о планете в каждом отпечатке.
+                                            `
+        },
+
+
+    ];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
@@ -143,7 +176,7 @@ const Home = ({options = {}}) => {
             location: "Ferndale, CA",
             content: "Очень порадовало качество исполнения. Цвета насыщенные, ничего не выцветает. Приятно удивлена такой стойкостью рисунка.",
             date: "Nov 24, 2023",
-            img:ru
+            img: ru
         },
 
         {
@@ -217,37 +250,34 @@ const Home = ({options = {}}) => {
         <div className="home">
 
             <header>
-                <div className={"header_opacity"}></div>
 
-                <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"home_swiper"}>
-                    {images.map((item , index)=>(
-                        <SwiperSlide>
-                            <img src={item} alt=""/>
+
+                <Swiper loop={true} modules={[Autoplay]} autoplay={{delay: 5000}} className={"home_swiper"}>
+                    {images.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className={"header_opacity"}></div>
+                            <img src={item.img_path} alt=""/>
+                            <div className="container-sm">
+                                <div className="header_box">
+                                    <div className="header_top_element">
+                                        <h1 data-aos="fade-up">{item.h1}</h1>
+                                    </div>
+                                    <div className="header_bottom_element">
+                                        <div className="col-lg-4">
+                                            <p dangerouslySetInnerHTML={{__html: item.p}}></p>
+                                            <div className="header_down">
+                                                <img src={down} alt=""/>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-4"><h1 data-aos="fade-up">{item.h2}</h1></div>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
 
-                <div className="container-sm">
-                    <div className="header_box">
-                        <div className="header_top_element">
-                            <h1 data-aos="fade-up">Цифровая печать</h1>
-                        </div>
-                        <div className="header_bottom_element">
-                            <div className="col-lg-4">
-                                <p>
-                                    Откройте для себя экологически чистую печать на тканях с промышленным качеством
-                                    — <br/>
-                                    сочные цвета, точные детали и забота о планете в каждом отпечатке.
-                                </p>
-                                <div className="header_down">
-                                    <img src={down} alt=""/>
-                                </div>
-                            </div>
-                            <div className="col-lg-4"><h1 data-aos="fade-up">нового поколения</h1></div>
-                        </div>
-                    </div>
-                </div>
             </header>
 
             <section className="home_s1">
@@ -312,9 +342,9 @@ const Home = ({options = {}}) => {
                             <div className="home_s2_item_1">
 
                                 <div className="home_s2_index_element">
-                                    <img src={home_s2_index} alt="" />
+                                    <img src={home_s2_index} alt=""/>
                                     <div className="home_s2_index_hleper">
-                                        <img src={home_s2_helper} alt="" style={{objectFit:"cover"}}/>
+                                        <img src={home_s2_helper} alt="" style={{objectFit: "cover"}}/>
                                     </div>
                                 </div>
 
@@ -513,7 +543,7 @@ const Home = ({options = {}}) => {
                 </div>
             </section>
 
-            <section className={"home_s7"} >
+            <section className={"home_s7"}>
                 <div className="container-sm">
                     <div className="home_s7_box ">
 
