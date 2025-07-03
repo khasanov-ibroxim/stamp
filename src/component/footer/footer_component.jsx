@@ -22,7 +22,7 @@ const FooterComponent = () => {
                             <textarea rows={5} placeholder={"Сообщение"} className={"input_msg"}/>
 
                         </div>
-                        <Link to={"#"}><TelegramIcon/> Свяжитесь</Link>
+                        <Link to={"#"}><TelegramIcon/> Отправить</Link>
                     </div>
                 </div>
             </div>

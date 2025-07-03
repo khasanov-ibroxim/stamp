@@ -11,6 +11,9 @@
 .footer_component{
     width: 100%;
     overflow: hidden;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
 }
 .footer_form {
     width: 100%;

@@ -126,14 +126,7 @@ const Production = () => {
                                 ограничений в цветах.</p>
 
                             <Link to={ABOUT}>Свяжитесь</Link>
-                            <div className="circle-wrapper">
-                                <div className="rotating-text">
-                                    <img src={s1_about} alt=""/>
-                                </div>
-                                <div className="center-icon">
-                                    <img src={s1_icon} alt="About Us Icon"/>
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -168,7 +161,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_1} alt=""/>
@@ -176,7 +169,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -186,7 +179,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_2} alt=""/>
@@ -194,7 +187,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -204,7 +197,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_3} alt=""/>
@@ -212,7 +205,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -223,7 +216,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_3} alt=""/>
@@ -231,7 +224,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -241,7 +234,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_1} alt=""/>
@@ -249,7 +242,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -259,7 +252,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
                                     <span>What We Do</span>
-                                    <h1>Christmas Toys</h1>
+                                    <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_2} alt=""/>
@@ -267,7 +260,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Read More</p>
+                                        <p>Подробно</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
