@@ -160,7 +160,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -178,7 +178,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -196,7 +196,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -215,7 +215,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -233,7 +233,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -251,7 +251,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    <span>What We Do</span>
+                                    
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">

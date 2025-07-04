@@ -11,7 +11,7 @@
 .footer_component{
     width: 100%;
     overflow: hidden;
-    height: 80vh;
+    height: 65vh;
     display: flex;
     align-items: flex-end;
 }
@@ -36,7 +36,7 @@
 .footer_form h3 {
     color: #111111;
     font-family: var(--stol-m), sans-serif;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .footer_form input {
@@ -139,6 +139,12 @@ footer{
     font-size: 19px;
   
     text-decoration: none;
+}
+
+@media screen and (max-width: 1000px){
+    .footer_component{
+        height: max-content;
+    }
 }
 
 @media screen and (max-width: 500px){
