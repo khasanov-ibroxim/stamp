@@ -34,10 +34,10 @@ const Footer = () => {
                     <div className="footer_item">
                         <h1>Меню</h1>
                         <ul>
-                            <li><Link to={HOME}>Главная</Link></li>
-                            <li><Link to={ABOUT}>О нас</Link></li>
-                            <li><Link to={PRODUCTION}>Производство</Link></li>
-                            <li><Link to={CONTACT}>Контакты</Link></li>
+                            <li><Link to={HOME} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Главная</Link></li>
+                            <li><Link to={ABOUT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>О нас</Link></li>
+                            <li><Link to={PRODUCTION} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Производство</Link></li>
+                            <li><Link to={CONTACT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Контакты</Link></li>
                         </ul>
                     </div>
                     <div className="footer_item">
