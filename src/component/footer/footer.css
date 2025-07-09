@@ -11,7 +11,7 @@
 .footer_component{
     width: 100%;
     overflow: hidden;
-    height: 65vh;
+    min-height: 65vh;
     display: flex;
     align-items: flex-end;
 }
@@ -23,7 +23,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px;
-
 }
 
 .footer_form span {
