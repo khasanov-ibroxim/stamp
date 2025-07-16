@@ -11,7 +11,8 @@ import header_img from "@/assets/headers/2O8A5037.JPG"
 import s1_1 from "@/assets/production/s1/2O8A4973.JPG"
 import s1_icon from "@/assets/production/s1/icon.svg"
 import s1_about from "@/assets/production/s1/about-us.svg"
-
+import ScreenPrinting from "@/assets/home/icon/screen-printing.png"
+import Dyeing from "@/assets/home/icon/dyeing.png"
 import s2_1 from "@/assets/production/s2/2O8A5147.JPG"
 import s2_2 from "@/assets/production/s2/2O8A5149.JPG"
 import s2_3 from "@/assets/production/s2/2O8A5141.JPG"
@@ -26,7 +27,7 @@ import s5_7 from "@/assets/production/s5/2O8A4793.jpg"
 import s5_8 from "@/assets/production/s5/2O8A4974.JPG"
 
 import EastIcon from '@mui/icons-material/East';
-import {Timeline, Affix ,Image} from 'antd';
+import {Timeline, Affix, Image} from 'antd';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import {useMediaQuery} from "@mui/material";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
@@ -62,11 +63,11 @@ const Production = () => {
 
             <div className={`about_header `}>
                 <div className="about_header_opacity"></div>
-                <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"about_swiper"}>
+                <Swiper modules={[Autoplay]} autoplay={{delay: 5000}} className={"about_swiper"}>
 
-                        <SwiperSlide>
-                            <img src={header_img} alt=""/>
-                        </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={header_img} alt=""/>
+                    </SwiperSlide>
 
                 </Swiper>
                 <h1>Наши услуги</h1>
@@ -91,7 +92,7 @@ const Production = () => {
                                 boxShadow: "0 0 5px rgba(0,0,0,.5)",
                                 borderRadius: "20px"
                             }}>
-                                <AllInboxIcon/>
+                                <img src={ScreenPrinting}/>
                                 <p>Печать</p>
                             </div>
                         </div>
@@ -102,7 +103,7 @@ const Production = () => {
                                 boxShadow: "0 0 5px rgba(0,0,0,.5)",
                                 borderRadius: "20px"
                             }}>
-                                <AllInboxIcon/>
+                                <img src={Dyeing}/>
                                 <p>Крашение</p>
                             </div>
                         </div>
@@ -160,7 +161,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -178,7 +179,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -196,7 +197,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -215,7 +216,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -233,7 +234,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -251,7 +252,7 @@ const Production = () => {
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
-                                    
+
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
@@ -348,8 +349,9 @@ const Production = () => {
                                             </div>,
                                             children: <>
                                                 <h1>Надёжная технология</h1>
-                                                <p>Используем красители от Rudolf, Birkim и Bezema, а также точную
-                                                    рецептуру с лабораторией ATAC.</p>
+                                                <p>Мы используем красители и химикаты от Rudolf, Birkim, Bezema и Jay
+                                                    Chemical, а также точные рецептуры, разработанные в сотрудничестве с
+                                                    лабораторией ATAC.</p>
                                             </>,
                                         },
 
@@ -364,61 +366,62 @@ const Production = () => {
                     <div className="container-sm">
                         <Image.PreviewGroup>
                             <div className="row">
-                                <Swiper slidesPerView={4} spaceBetween={10} modules={[Autoplay]} autoplay={{delay:2000}}>
+                                <Swiper slidesPerView={4} spaceBetween={10} modules={[Autoplay]}
+                                        autoplay={{delay: 2000}}>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_1}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_1}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_2}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_2}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_3}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_3}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_4}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_4}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_5}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_5}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_6}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_6}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_7}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_7}/>
+                                        </div>
 
                                     </SwiperSlide>
                                     <SwiperSlide>
 
-                                            <div className="pr_s5_item">
-                                                <Image src={s5_8}/>
-                                            </div>
+                                        <div className="pr_s5_item">
+                                            <Image src={s5_8}/>
+                                        </div>
 
                                     </SwiperSlide>
 
@@ -445,7 +448,8 @@ const Production = () => {
                                         <ul>
                                             <li>
                                                 <LocationOnRoundedIcon/>
-                                                <a href="#">Республика Узбекистан,город Ташкент, Бектемирский р-н, улица Туена 12</a>
+                                                <a href="#">Республика Узбекистан,город Ташкент, Бектемирский р-н, улица
+                                                    Туена 12</a>
                                             </li>
                                             <li>
                                                 <PhoneAndroidRoundedIcon/>
@@ -509,34 +513,34 @@ const Production = () => {
                     <section className={"home_s9"}>
                         <div className="home_corusel_wrapper">
                             <div className="home_corusel">
-                                {Array.from({ length: 2 }).map((_, index) => (
+                                {Array.from({length: 2}).map((_, index) => (
                                     <React.Fragment key={index}>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_1} alt="Stamp partnior" />
+                                            <img src={partnior_1} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_2} alt="Stamp partnior" />
+                                            <img src={partnior_2} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_3} alt="Stamp partnior" />
+                                            <img src={partnior_3} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_4} alt="Stamp partnior" />
+                                            <img src={partnior_4} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_5} alt="Stamp partnior" />
+                                            <img src={partnior_5} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_6} alt="Stamp partnior" />
+                                            <img src={partnior_6} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_7} alt="Stamp partnior" />
+                                            <img src={partnior_7} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_8} alt="Stamp partnior" />
+                                            <img src={partnior_8} alt="Stamp partnior"/>
                                         </div>
                                         <div className="home_corusel_item">
-                                            <img src={partnior_9} alt="Stamp partnior" />
+                                            <img src={partnior_9} alt="Stamp partnior"/>
                                         </div>
                                     </React.Fragment>
                                 ))}

@@ -113,7 +113,7 @@ header {
 
 .home_s1_item_1 h1 {
     font-family: var(--stol-m), sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 600;
 
     color: #111;
@@ -135,16 +135,15 @@ header {
     flex-direction: column;
 }
 
-.home_s1_item_standart svg {
-    fill: #E66EB1;
-    font-size: 80px;
-    height: 60%;
+.home_s1_item_standart img {
+    object-fit: cover;
+    height: 35%;
 }
 
 .home_s1_item_standart p {
     color: #111;
     font-family: var(--stol-m), sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     height: 40%;
 }
 

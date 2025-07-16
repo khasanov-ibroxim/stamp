@@ -7,6 +7,15 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import SellIcon from '@mui/icons-material/Sell';
 import SignpostIcon from '@mui/icons-material/Signpost';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+
+import EcoPaint from "@/assets/home/icon/eco-paint.png"
+import Cloth from "@/assets/home/icon/cloth-accessory.png"
+import Factory from "@/assets/home/icon/factory.png"
+import Precision from "@/assets/home/icon/precision.png"
+import Consumables from "@/assets/home/icon/consumables.png"
+import Adaptation from "@/assets/home/icon/adaptation.png"
+
+
 import {Link} from "react-router-dom";
 
 const {Panel} = Collapse;
@@ -285,24 +294,25 @@ const Home = ({options = {}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className=" home_s1_item_1">
-                                <span>Умная печать</span>
-                                <h1>Как совместить безупречное качество печати и заботу об экологии?</h1>
+                                <span>Устойчивое окрашивание</span>
+                                <h1>Как современные технологии гладкоокрашивания и печати помогают сохранять баланс
+                                    между качеством и экологией?</h1>
                                 <p>
-                                    Мы предлагаем цифровую печать на тканях, сочетающую индустриальную точность с
-                                    экологической ответственностью. Высокая стойкость, яркость и безопасность — теперь
-                                    без компромиссов.
+                                    Мы предлагаем гладкоокрашенные трикотажные полотна и цифровую печать на тканях,
+                                    сочетающие индустриальную точность с экологической ответственностью. Высокая
+                                    стойкость, яркость и безопасность — без компромиссов.
                                 </p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <AllInboxIcon/>
+                                <img src={EcoPaint}/>
                                 <p>Экологичные <br/> чернила</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <AllInboxIcon/>
+                                <img src={Cloth}/>
                                 <p> Тканевая <br/> основа</p>
                             </div>
                         </div>
@@ -310,25 +320,25 @@ const Home = ({options = {}}) => {
                     <div className="row mt-5">
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <SellIcon/>
+                                <img src={Factory}/>
                                 <p>Промышленная <br/> стойкость</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
+                                <img src={Precision}/>
                                 <p>Фотореалистичная <br/> точность</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
+                                <img src={Consumables}/>
                                 <p>Безопасность <br/> материалов</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
-                                <SignpostIcon/>
+                                <img src={Adaptation}/>
                                 <p>Гибкость <br/> тиражей </p>
                             </div>
                         </div>

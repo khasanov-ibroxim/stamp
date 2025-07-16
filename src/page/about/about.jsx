@@ -5,6 +5,10 @@ import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+
+import ScreenPrinting from "@/assets/home/icon/screen-printing.png"
+import Dyeing from "@/assets/home/icon/dyeing.png"
+
 import {Link} from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import Footer_component from "@/component/footer/footer_component.jsx";
@@ -126,7 +130,7 @@ const About = ({options = {}}) => {
                             <div className="about_s2_item_box">
                                 <div className="about_s2_item">
                                     <div className="about_s2_item_top">
-                                        <InventoryRoundedIcon/>
+                                        <img src={ScreenPrinting}/>
                                     </div>
                                     <div className="about_s2_item_body">
                                         <h2>Цифровая <br/> печать </h2>
@@ -146,7 +150,7 @@ const About = ({options = {}}) => {
                             <div className="about_s2_item_box">
                                 <div className="about_s2_item">
                                     <div className="about_s2_item_top">
-                                        <LibraryBooksIcon/>
+                                        <img src={Dyeing}/>
                                     </div>
                                     <div className="about_s2_item_body">
                                         <h2>Крашение </h2><br/>
