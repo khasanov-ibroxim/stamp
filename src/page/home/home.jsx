@@ -23,14 +23,16 @@ const {Panel} = Collapse;
 import home_s2_helper from "@/assets/home/s2/2O8A5137.JPG"
 import home_s2_index from "@/assets/home/s2/2O8A5001_Index.jpg"
 
-import s4_1 from "@/assets/home/s4/2O8A5135.JPG"
+import s4_1 from "@/assets/home/s4/34462008-759a-4f30-970d-7873fa5be96b.jpg"
 import s4_2 from "@/assets/home/s4/2O8A5128.JPG"
-import s4_3 from "@/assets/home/s4/2O8A5139.JPG"
+import s4_3 from "@/assets/home/s4/44820942-0e79-415c-b4b5-b0b906de54cf.jpg"
 import s4_4 from "@/assets/home/s4/2O8A5132.JPG"
-import s4_5 from "@/assets/home/s4/2O8A5141.JPG"
-import s4_6 from "@/assets/home/s4/2O8A5143.JPG"
-import s4_7 from "@/assets/home/s4/2O8A5148.JPG"
-import s4_8 from "@/assets/home/s4/2O8A5145.JPG"
+import s4_5 from "@/assets/home/s4/background_silk_1.jpg"
+import s4_6 from "@/assets/home/s4/background_silk_2.jpg"
+import s4_7 from "@/assets/home/s4/background_silk_3.jpg"
+import s4_8 from "@/assets/home/s4/d367b1f8-3289-44ce-a872-35fae02dd9eb.jpg"
+import s4_9 from "@/assets/home/s4/pink-fabric-texture-crumpled-cloth-background.jpg"
+import s4_10 from "@/assets/home/s4/texture-pink-pastel-knitted-sweater-fabric.jpg"
 
 
 import bl from "@/assets/home/s5/bl.png"
@@ -331,13 +333,13 @@ const Home = ({options = {}}) => {
                             </div>
                         </div>
                         <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
+                            <div className="home_s1_item_standart">
                                 <img src={Consumables}/>
                                 <p>Безопасность <br/> материалов</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
-                            <div className=" home_s1_item_standart">
+                            <div className="home_s1_item_standart">
                                 <img src={Adaptation}/>
                                 <p>Гибкость <br/> тиражей </p>
                             </div>
@@ -412,97 +414,51 @@ const Home = ({options = {}}) => {
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_1} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>T-Shirts</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_2} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>MUGS</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_3} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Tea packaging</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_4} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Book cover</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_5} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Fabric shoppers</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_6} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Banners & ads</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_7} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Banners & ads</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="home_s4_item">
                             <img src={s4_8} alt=""/>
-                            <Link className="home_s4_text" to={"#"}>
-                                <span>IDEAS</span>
-                                <div className="home_s4_content">
-                                    <h3>Banners & ads</h3>
-                                    <ArrowOutwardIcon/>
-                                </div>
-                            </Link>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home_s4_item">
+                            <img src={s4_9} alt=""/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home_s4_item">
+                            <img src={s4_10} alt=""/>
                         </div>
                     </SwiperSlide>
                 </Swiper>
