@@ -9,11 +9,11 @@ nav.Home {
     background-color: transparent;
 }
 nav.nav_defolt{
-    background: white;
+    background: #191919;
 
 }
 nav.nav_defolt .nav_menu ul li a{
-    color: black;
+    color: #ffffff;
 }
 nav.Home.fixed-navbar {
     position: fixed;
@@ -103,7 +103,7 @@ nav.nav_defolt .nav_menu ul li a {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: 0.3s;
 }
 
@@ -123,12 +123,18 @@ nav.nav_defolt .nav_menu ul li a {
 .nav_end a {
     color: #fff;
     cursor: pointer;
+    text-wrap: nowrap;
 }
 
 .navburger {
     display: none;
 }
-
+.nav_defolt .navburger{
+    color: white !important;
+}
+.nav_defolt .lang_nav .ant-space-item{
+    color: white !important;
+}
 .nav_end_link {
     background: #ff97d2;
     margin-left: 20px;
@@ -275,7 +281,7 @@ nav.nav_defolt .nav_menu ul li a {
 
 @media screen and (max-width: 500px) {
     .nav_top_for_home img {
-        width: 100%;
+        width: 60%;
         height: 100%;
     }
 }

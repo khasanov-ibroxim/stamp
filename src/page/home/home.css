@@ -85,7 +85,7 @@ header {
 
 @media screen and (max-width: 1000px) {
     .header_top_element h1, .header_bottom_element h1 {
-        font-size: 60px !important;
+        font-size: 35px !important;
     }
 
     .header_bottom_element {
@@ -729,7 +729,10 @@ header {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+    .home_s8_content h1{
+        font-size: 35px;
+    }
     .home_s8_content_item {
         padding: 15px;
     }

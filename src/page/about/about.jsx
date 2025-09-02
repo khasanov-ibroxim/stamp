@@ -8,7 +8,6 @@ import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
 import ScreenPrinting from "@/assets/home/icon/screen-printing.png"
 import Dyeing from "@/assets/home/icon/dyeing.png"
-
 import {Link} from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import Footer_component from "@/component/footer/footer_component.jsx";
@@ -40,6 +39,8 @@ import partnior_9 from "@/assets/home/partnior/part3.png";
 
 import header_1 from "@/assets/headers/2O8A4752.JPG";
 import header_2 from "@/assets/headers/2O8A4739_about.jpg";
+import {useTranslation} from "react-i18next";
+import {CONTACT} from "@/utils/const.jsx";
 
 
 const About = ({options = {}}) => {
@@ -49,24 +50,24 @@ const About = ({options = {}}) => {
     const images = [header_1, header_2];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(true);
+
+    const {t} = useTranslation()
+
     const itemFAQ = [
         {
             key: 1,
-            label: "Разработка дизайна",
-            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные
-                решения.</p>
+            label: t("about.s7.i1.n"),
+            children: <p>{t("about.s7.i1.d")}</p>
         },
         {
             key: 2,
-            label: "Создание принтов",
-            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения —
-                от креатива до текстуры.</p>
+            label: t("about.s7.i2.n"),
+            children: <p>{t("about.s7.i2.d")}</p>
         },
         {
             key: 3,
-            label: "Контроль качества и логистика",
-            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему
-                Узбекистану.</p>
+            label: t("about.s7.i3.n"),
+            children: <p>{t("about.s7.i3.d")}</p>
         },
     ];
     useEffect(() => {
@@ -92,7 +93,7 @@ const About = ({options = {}}) => {
     }, []);
     return (
         <div>
-            <div className={`about_header `}>
+            <div className={`about_header`}>
                 <div className="about_header_opacity"></div>
                 <Swiper modules={[Autoplay ]}  autoplay={{delay:5000}} className={"about_swiper"}>
                     {images.map((item , index)=>(
@@ -101,7 +102,7 @@ const About = ({options = {}}) => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <h1>О нас</h1>
+                <h1>{t("about.header")}</h1>
             </div>
 
 
@@ -109,15 +110,13 @@ const About = ({options = {}}) => {
                 <div className="container-sm">
                     <div className="row  ">
                         <div className="col-lg-6">
-                            <span>Услуги</span>
-                            <h2>Stampa Textile -</h2>
-                            <p>Инновации в печати и окрашивании тканей</p>
+                            <span>{t("about.s1.subtitle")}</span>
+                            <h2>{t("about.s1.title")}</h2>
+                            <p>{t("about.s1.b_title")}</p>
                         </div>
                         <div className="col-lg-6 align-items-end justify-content-end d-flex flex-column">
-                            <p>Мы специализируемся на выпуске гладкоокрашенных и печатных трикотажных полотен, а также
-                                работаем с широким спектром ткацких материалов. </p>
-                            <p>Используем только передовое оборудование из Турции и Италии, обеспечивая промышленное
-                                качество на каждом этапе.</p>
+                            <p>{t("about.s1.p1")}</p>
+                            <p>{t("about.s1.p2")}</p>
                         </div>
                     </div>
                 </div>
@@ -133,11 +132,11 @@ const About = ({options = {}}) => {
                                         <img src={ScreenPrinting}/>
                                     </div>
                                     <div className="about_s2_item_body">
-                                        <h2>Цифровая <br/> печать </h2>
+                                        <h2 dangerouslySetInnerHTML={{__html:t("about.s1.i1")}}></h2>
                                     </div>
                                     <div className="about_s2_item_bottom">
                                         <div className="about_s2_item_bottom_text">
-                                            узнать больше
+                                            {t("about.s1.i_btn")}
                                         </div>
                                         <div className="about_s2_item_bottom_icon">
                                             <EastRoundedIcon/>
@@ -153,11 +152,11 @@ const About = ({options = {}}) => {
                                         <img src={Dyeing}/>
                                     </div>
                                     <div className="about_s2_item_body">
-                                        <h2>Крашение </h2><br/>
+                                        <h2>{t("about.s1.i2")}</h2><br/>
                                     </div>
                                     <div className="about_s2_item_bottom">
                                         <div className="about_s2_item_bottom_text">
-                                            узнать больше
+                                            {t("about.s1.i_btn")}
                                         </div>
                                         <div className="about_s2_item_bottom_icon">
                                             <EastRoundedIcon/>
@@ -181,14 +180,12 @@ const About = ({options = {}}) => {
                         <div className="col-lg-6">
                             <div className="about_s3_content">
                                 <div className="about_s3_content_top">
-                                    <span>Надёжное партнёрство</span>
-                                    <h1> Ваш дизайн — наша печать: создаём на ткани без компромиссов</h1>
+                                    <span>{t("about.s3.span")}</span>
+                                    <h1>{t("about.s3.h1")}</h1>
                                 </div>
                                 <div className="about_s3_content_bottom">
-                                    <p>Команда «Stampa Textile» стремится к постоянному улучшению продукции и сервисов,
-                                        внедряя прогрессивные методы работы. Мы ценим доверие клиентов и предлагаем
-                                        выгодные условия сотрудничества, включая гибкую систему скидок.</p>
-                                    <Link to={"#"}>Свяжитесь</Link>
+                                    <p>{t("about.s3.p")}</p>
+                                    <Link to={CONTACT}>{t("about.s3.link")}</Link>
                                 </div>
                             </div>
                         </div>
@@ -202,13 +199,13 @@ const About = ({options = {}}) => {
                         {Array.from({length: 2}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
-                                    Печать & Дизайн
+                                    {t("about.s4.i1")}
                                 </div>
                                 <div className="home_corusel_item">
-                                    Цвет
+                                    {t("about.s4.i2")}
                                 </div>
                                 <div className="home_corusel_item">
-                                    Стиль
+                                    {t("about.s4.i3")}
                                 </div>
                             </React.Fragment>
                         ))}
@@ -222,8 +219,8 @@ const About = ({options = {}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="about_s5_left_top">
-                                <span>Лаборатория</span>
-                                <h1>Контроль на каждом этапе</h1>
+                                <span>{t("about.s5.subtitle")}</span>
+                                <h1>{t("about.s5.title")}</h1>
                             </div>
                             <div className="about_s5_left_bottom">
                                 <img src={s5_1} alt=""/>
@@ -235,10 +232,7 @@ const About = ({options = {}}) => {
                                     <img src={s5_2} alt=""/>
                                 </div>
                                 <div className="about_s5_right_bottom">
-                                    <p>Наша лаборатория — это сердце производственного процесса, где тестируются ткани,
-                                        краски и готовая продукция. Мы проверяем стойкость окрашивания, усадку,
-                                        плотность и соответствие цвета, чтобы результат соответствовал самым высоким
-                                        стандартам.</p>
+                                    <p>{t("about.s5.p")}</p>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +250,7 @@ const About = ({options = {}}) => {
                             <SwiperSlide>
                                 <div className="home_s5_item">
                                     <span className={"about_s6_element"}>&#10075;&#10075;</span>
-                                    <h1>Ваша эстетика + наша печать = ткань, которую невозможно не заметить!</h1>
+                                    <h1>{t("about.s5.h2")}</h1>
                                     <div className="home_s5_item_content">
 
                                         <div className="home_s5_profile_content">
@@ -279,7 +273,7 @@ const About = ({options = {}}) => {
                         <div className="col-lg-6">
                             <div className="home_s8_content">
                                 <button onClick={() => setIsOpen(true)}><PlayArrowRoundedIcon/></button>
-                                <h1>Комплексный подход к печати</h1>
+                                <h1>{t("about.s7.title")}</h1>
                                 <Collapse
                                     accordion
                                     expandIconPosition="start"
@@ -301,14 +295,14 @@ const About = ({options = {}}) => {
                                     <img src={s8_1} alt=""/>
                                     <div className="home_s8_content_item_box">
                                         <div className="home_s8_content_item">
-                                            <span>лет</span>
+                                            <span>{t("about.s7.box1.span")}</span>
                                             <h3>10+ </h3>
-                                            <p> на рынке</p>
+                                            <p>{t("about.s7.box1.p")}</p>
                                         </div>
                                         <div className="home_s8_content_item">
-                                            <span> довольных </span>
+                                            <span> {t("about.s7.box2.span")} </span>
                                             <h3>580+</h3>
-                                            <p>клиентов</p>
+                                            <p>{t("about.s7.box2.p")}</p>
                                         </div>
                                     </div>
                                 </div>

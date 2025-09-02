@@ -150,4 +150,7 @@ footer{
     .footer_item:nth-child(3) , .footer_item:nth-child(4){
         margin-top: 30px;
     }
+    .footer_form{
+        padding: 20px;
+    }
 }

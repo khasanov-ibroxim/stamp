@@ -13,9 +13,17 @@ import s1_icon from "@/assets/production/s1/icon.svg"
 import s1_about from "@/assets/production/s1/about-us.svg"
 import ScreenPrinting from "@/assets/home/icon/screen-printing.png"
 import Dyeing from "@/assets/home/icon/dyeing.png"
-import s2_1 from "@/assets/production/s2/2O8A5147.JPG"
-import s2_2 from "@/assets/production/s2/2O8A5149.JPG"
-import s2_3 from "@/assets/production/s2/2O8A5141.JPG"
+
+
+import s2_1 from "@/assets/production/s2/183e42ed54a03929183a108902f8109c.jpg"
+import s2_2 from "@/assets/production/s2/403c34a96375932ff4d417a6025b8aba.jpg"
+import s2_3 from "@/assets/production/s2/561b4ea8799ad9860e33d253d4994c64.jpg"
+import s2_4 from "@/assets/production/s2/5264d429d3e8108f806a75c7c753383f.jpg"
+import s2_5 from "@/assets/production/s2/029749c86c394f9f2a387fceb9436920.jpg"
+import s2_6 from "@/assets/production/s2/2382345e48dcc0d13f3ab78f4f932cdd.jpg"
+import s2_7 from "@/assets/production/s2/a6ffe906f2bac2ab7fa94f726502020d.jpg"
+import s2_8 from "@/assets/production/s2/b46c81632e2a2cca060f612324f65cc8.jpg"
+import s2_9 from "@/assets/production/s2/b4942cf43f08f65d587e17a8ba367bde.jpg"
 
 import s5_1 from "@/assets/production/s5/2O8A4744.JPG"
 import s5_2 from "@/assets/production/s5/2O8A4752.JPG"
@@ -53,10 +61,13 @@ import partnior_6 from "@/assets/home/partnior/ninola-150x64-1.png";
 import partnior_7 from "@/assets/home/partnior/part1.png";
 import partnior_8 from "@/assets/home/partnior/part2.png";
 import partnior_9 from "@/assets/home/partnior/part3.png";
+import {useTranslation} from "react-i18next";
 
 const Production = () => {
     const mediaQuery = useMediaQuery('(max-width: 1024px)');
     const mediaQuerySM = useMediaQuery('(max-width: 600px)');
+    const {t} = useTranslation()
+
 
     return (
         <div>
@@ -70,19 +81,16 @@ const Production = () => {
                     </SwiperSlide>
 
                 </Swiper>
-                <h1>Наши услуги</h1>
+                <h1>{t("production.header")}</h1>
             </div>
             <section className="home_s1">
                 <div className="container-sm">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className=" home_s1_item_1">
-                                <span>Технологии цвета</span>
-                                <h1>Печатаем и окрашиваем безупречно</h1>
-                                <p>
-                                    Применяем современные методы цифровой печати и крашения, чтобы передать каждую
-                                    деталь с точностью, глубиной и стойкостью цвета.
-                                </p>
+                                <span>{t("production.s1.span")}</span>
+                                <h1>{t("production.s1.h1")}</h1>
+                                <p>{t("production.s1.p")}</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
@@ -93,7 +101,7 @@ const Production = () => {
                                 borderRadius: "20px"
                             }}>
                                 <img src={ScreenPrinting}/>
-                                <p>Печать</p>
+                                <p>{t("production.s1.i1")}</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
@@ -104,7 +112,7 @@ const Production = () => {
                                 borderRadius: "20px"
                             }}>
                                 <img src={Dyeing}/>
-                                <p>Крашение</p>
+                                <p>{t("production.s1.i2")}</p>
                             </div>
                         </div>
                     </div>
@@ -118,17 +126,10 @@ const Production = () => {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <div className="pr_s1_content">
-                            <h1>Цвет, который остаётся</h1>
-                            <p>Мы используем реактивные чернила на водной основе с международными сертификатами
-                                безопасности — идеально даже для детской одежды. Печатаем на своих тканях или на
-                                предоставленных заказчиком, от «суровья» до готового результата.</p>
-                            <p>Газо-опалка MERSAN обеспечивает идеальную подготовку ткани, а принтер MS JPK EVO (Италия)
-                                печатает до 240 см в ширину с насыщенностью, стойкостью и максимальной детализацией без
-                                ограничений в цветах.</p>
-
-                            <Link to={ABOUT}>Свяжитесь</Link>
-
-
+                            <h1>{t("production.s2.h1")}</h1>
+                            <p>{t("production.s2.p1")}</p>
+                            <p>{t("production.s2.p2")}</p>
+                            <Link to={ABOUT}>{t("production.s2.link")}</Link>
                         </div>
                     </div>
                 </div>
@@ -137,9 +138,8 @@ const Production = () => {
             <section className="pr_s2 cursor_left_right">
                 <div className="container-sm">
                     <div className="pr_s2_top">
-                        <span>Топ заказы</span>
-                        <h1 style={{textAlign: "center"}}>Выбирают чаще всего — за качество, стиль и точность
-                            исполнения</h1>
+                        <span>{t("production.s3.span")}</span>
+                        <h1 style={{textAlign: "center"}}>{t("production.s3.h1")}</h1>
                     </div>
 
                     <Swiper
@@ -162,7 +162,7 @@ const Production = () => {
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
 
-                                    <h1>наименование</h1>
+                                    <h1>{t("production.s3.name")}</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
                                     <img src={s2_1} alt=""/>
@@ -170,7 +170,7 @@ const Production = () => {
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
                                     <div className={'pr_s2_item_bottom_content'}>
-                                        <p>Подробно</p>
+                                        <p>{t("production.s3.more")}</p>
                                         <EastIcon/>
                                     </div>
                                 </div>
@@ -212,7 +212,6 @@ const Production = () => {
                                 </div>
                             </div>
                         </SwiperSlide>
-
                         <SwiperSlide>
                             <div className="pr_s2_item">
                                 <div className="pr_s2_item_top">
@@ -220,7 +219,7 @@ const Production = () => {
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
-                                    <img src={s2_3} alt=""/>
+                                    <img src={s2_4} alt=""/>
                                 </div>
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
@@ -238,7 +237,7 @@ const Production = () => {
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
-                                    <img src={s2_1} alt=""/>
+                                    <img src={s2_5} alt=""/>
                                 </div>
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
@@ -256,7 +255,61 @@ const Production = () => {
                                     <h1>наименование</h1>
                                 </div>
                                 <div className="pr_s2_item_body">
-                                    <img src={s2_2} alt=""/>
+                                    <img src={s2_6} alt=""/>
+                                </div>
+                                <div className="pr_s2_item_bottom">
+                                    <span className={"pr_s2_item_bottom_element"}></span>
+                                    <div className={'pr_s2_item_bottom_content'}>
+                                        <p>Подробно</p>
+                                        <EastIcon/>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="pr_s2_item">
+                                <div className="pr_s2_item_top">
+
+                                    <h1>наименование</h1>
+                                </div>
+                                <div className="pr_s2_item_body">
+                                    <img src={s2_7} alt=""/>
+                                </div>
+                                <div className="pr_s2_item_bottom">
+                                    <span className={"pr_s2_item_bottom_element"}></span>
+                                    <div className={'pr_s2_item_bottom_content'}>
+                                        <p>Подробно</p>
+                                        <EastIcon/>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="pr_s2_item">
+                                <div className="pr_s2_item_top">
+
+                                    <h1>наименование</h1>
+                                </div>
+                                <div className="pr_s2_item_body">
+                                    <img src={s2_8} alt=""/>
+                                </div>
+                                <div className="pr_s2_item_bottom">
+                                    <span className={"pr_s2_item_bottom_element"}></span>
+                                    <div className={'pr_s2_item_bottom_content'}>
+                                        <p>Подробно</p>
+                                        <EastIcon/>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="pr_s2_item">
+                                <div className="pr_s2_item_top">
+
+                                    <h1>наименование</h1>
+                                </div>
+                                <div className="pr_s2_item_body">
+                                    <img src={s2_9} alt=""/>
                                 </div>
                                 <div className="pr_s2_item_bottom">
                                     <span className={"pr_s2_item_bottom_element"}></span>
@@ -274,13 +327,13 @@ const Production = () => {
             <section className="pr_s3">
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        {Array.from({length: 2}).map((_, index) => (
+                        {Array.from({length: 10}).map((_, index) => (
                             <React.Fragment key={index}>
                                 <div className="home_corusel_item">
-                                    Печать
+                                    {t("production.s4.i1")}
                                 </div>
                                 <div className="home_corusel_item">
-                                    Крашение
+                                    {t("production.s4.i2")}
                                 </div>
                             </React.Fragment>
                         ))}
@@ -296,32 +349,29 @@ const Production = () => {
                                 {!mediaQuery ?
                                     <div className={"pr_s4_box"}>
                                         <div className="pr_s4_left">
-                                            <span>Точное окрашивание</span>
-                                            <h1>Современные технологии для яркости, стойкости и безупречного цвета</h1>
-                                            <p>Каждый метр ткани проходит точную обработку, обеспечивая глубину цвета,
-                                                идеальную равномерность и долговечность даже после множества стирок.</p>
+                                            <span>{t("production.s5.span")}</span>
+                                            <h1>{t("production.s5.h1")}</h1>
+                                            <p>{t("production.s5.p")}</p>
                                         </div>
                                     </div> :
                                     <div className="pr_s4_left" style={{marginBottom: "20px"}}>
-                                        <span>Точное окрашивание</span>
-                                        <h1>Современные технологии для яркости, стойкости и безупречного цвета</h1>
-                                        <p>Каждый метр ткани проходит точную обработку, обеспечивая глубину цвета,
-                                            идеальную равномерность и долговечность даже после множества стирок.</p>
+                                        <span>{t("production.s5.span")}</span>
+                                        <h1>{t("production.s5.h1")}</h1>
+                                        <p>{t("production.s5.p")}</p>
                                     </div>
                                 }
 
                             </div>
                             <div className="col-lg-6" style={mediaQuerySM ? {padding: "0 30px"} : {}}>
-                                <Timeline
+                            <Timeline
                                     items={[
                                         {
                                             dot: <div className="pr_s4_icon">
                                                 <FormatColorFillIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Стойкость цвета</h1>
-                                                <p>Окрашивание не выгорает, не тускнеет и выдерживает многократные
-                                                    стирки.</p>
+                                                <h1>{t("production.s5.i1.h1")}</h1>
+                                                <p>{t("production.s5.i1.p")}</p>
                                             </>,
                                         },
                                         {
@@ -329,8 +379,8 @@ const Production = () => {
                                                 <BalanceIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Высокое качество</h1>
-                                                <p>Цвет ложится равномерно, создавая насыщенные и чёткие оттенки.</p>
+                                                <h1>{t("production.s5.i2.h1")}</h1>
+                                                <p>{t("production.s5.i2.p")}</p>
                                             </>,
                                         },
                                         {
@@ -338,9 +388,8 @@ const Production = () => {
                                                 <PrecisionManufacturingIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Полная свобода</h1>
-                                                <p>Возможна запечатка всей поверхности ткани, даже самых сложных
-                                                    дизайнов.</p>
+                                                <h1>{t("production.s5.i3.h1")}</h1>
+                                                <p>{t("production.s5.i3.p")}</p>
                                             </>,
                                         },
                                         {
@@ -348,10 +397,8 @@ const Production = () => {
                                                 <LocalLaundryServiceIcon/>
                                             </div>,
                                             children: <>
-                                                <h1>Надёжная технология</h1>
-                                                <p>Мы используем красители и химикаты от Rudolf, Birkim, Bezema и Jay
-                                                    Chemical, а также точные рецептуры, разработанные в сотрудничестве с
-                                                    лабораторией ATAC.</p>
+                                                <h1>{t("production.s5.i4.h1")}</h1>
+                                                <p>{t("production.s5.i4.p")}</p>
                                             </>,
                                         },
 
@@ -438,18 +485,15 @@ const Production = () => {
                             <div className="col-lg-6">
                                 <div className="contact_content">
                                     <div className="contact_content_top">
-                                        <span>Контакты</span>
-                                        <h1>Готовы к сотрудничеству? <br/> Обсудим ваш проект!</h1>
-                                        <p>
-                                            От идеи до реализации, учитывая каждую деталь и ваши пожелания.
-                                        </p>
+                                        <span>{t("contact.span")}</span>
+                                        <h1 dangerouslySetInnerHTML={{__html:t("contact.h1")}}></h1>
+                                        <p>{t("contact.p")}</p>
                                     </div>
                                     <div className="contact_content_bottom">
                                         <ul>
                                             <li>
                                                 <LocationOnRoundedIcon/>
-                                                <a href="#">Республика Узбекистан,город Ташкент, Бектемирский р-н, улица
-                                                    Туена 12</a>
+                                                <a href="#">{t("contact.location")}</a>
                                             </li>
                                             <li>
                                                 <PhoneAndroidRoundedIcon/>
@@ -469,7 +513,7 @@ const Production = () => {
                                         <div className="col-lg-12">
                                             <div className="input">
                                                 <PersonOutlineSharpIcon/>
-                                                <input type="text" placeholder={"Имя"}/>
+                                                <input type="text" placeholder={t("contact.name")}/>
                                             </div>
                                         </div>
                                     </div>
@@ -477,7 +521,7 @@ const Production = () => {
                                         <div className="col-lg-12">
                                             <div className="input">
                                                 <PhoneInTalkOutlinedIcon/>
-                                                <input type="tel" placeholder={"Телефон"}/>
+                                                <input type="tel" placeholder={t("contact.tel")}/>
                                             </div>
                                         </div>
                                     </div>
@@ -488,7 +532,7 @@ const Production = () => {
                                                 <textarea
                                                     rows={3}
                                                     type="text"
-                                                    placeholder={"Оставьте заявку — создадим нечто выдающееся вместе!"}/>
+                                                    placeholder={t("contact.msg")}/>
                                             </div>
                                         </div>
                                     </div>
@@ -496,7 +540,7 @@ const Production = () => {
                                     <div className="row mt-5 d-flex justify-content-center align-items-center">
                                         <div className="col-lg-12 col-sm-6 col-md-6">
                                             <div className="contact_btn">
-                                                <Link to={"#"}><SendOutlinedIcon/>Свяжитесь</Link>
+                                                <Link to={"#"}><SendOutlinedIcon/>{t("contact.send")}</Link>
                                             </div>
                                         </div>
                                     </div>

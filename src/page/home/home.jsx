@@ -73,154 +73,118 @@ import VanillaTilt from "vanilla-tilt";
 import header_1 from "@/assets/home/2O8A5026.JPG"
 import header_2 from "@/assets/home/2O8A5001.jpg"
 import header_3 from "@/assets/home/home_header3.jpg"
+import {useTranslation} from "react-i18next";
+import {ABOUT} from "@/utils/const.jsx";
 
 const Home = ({options = {}}) => {
     const gridRef = useRef(null);
-
+    const {t} = useTranslation();
     const [activeKey, setActiveKey] = useState(null);
     const tiltRef = useRef(null);
     const images = [
         {
             img_path: header_2,
-            h1: "Совершенство ",
-            h2: "Цвет Текстура",
-            p: `
-                                                Результат тонкой работы, где каждая деталь имеет значение: от выбора
-                                                 красителей до финальной обработки ткани, создающей идеальное визуальное 
-                                                 и тактильное восприятие.
-                                            `
+            h1: t("home.home_header.i1.h1"),
+            h2: t("home.home_header.i1.h2"),
+            p: t("home.home_header.i1.p")
         },
         {
             img_path: header_3,
-            h1: "Совершенное  ",
-            h2: " крашение тканей",
-            p: `
-                                          Совершенное крашение тканей — без этого невозможно 
-                                          добиться глубины цвета, равномерности оттенков и стойкости,
-                                           которые отличают по-настоящему качественный текстиль.
-                                            `
+            h1: t("home.home_header.i2.h1"),
+            h2: t("home.home_header.i2.h2"),
+            p: t("home.home_header.i2.p")
         },
         {
             img_path: header_1,
-            h1: "Цифровая печать",
-            h2: "нового поколения",
-            p: `
-                                                Откройте для себя экологически чистую печать на тканях с промышленным качеством
-                                                — <br/>
-                                                сочные цвета, точные детали и забота о планете в каждом отпечатке.
-                                            `
+            h1: t("home.home_header.i3.h1"),
+            h2: t("home.home_header.i3.h2"),
+            p: t("home.home_header.i3.p")
         },
 
 
     ];
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [fade, setFade] = useState(true);
+
 
     const itemFAQ = [
         {
             key: 1,
-            label: "Разработка дизайна",
-            children: <p>Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные
-                решения.</p>
+            label: t("home.home_s8.i1.t"),
+            children: <p>{t("home.home_s8.i1.c")}</p>
         },
         {
             key: 2,
-            label: "Создание принтов",
-            children: <p>Генерируем уникальные принты в духе вашего бренда и подбираем идеальные технологии нанесения —
-                от креатива до текстуры.</p>
+            label: t("home.home_s8.i2.t"),
+            children: <p>{t("home.home_s8.i2.c")}</p>
         },
         {
             key: 3,
-            label: "Контроль качества и логистика",
-            children: <p>Следим за каждым этапом производства и доставляем готовую продукцию быстро и надёжно по всему
-                Узбекистану.</p>
+            label: t("home.home_s8.i3.t"),
+            children: <p>{t("home.home_s8.i3.c")}</p>
         },
     ];
     const items = [
         {
             id: 1,
-            name: "Россия",
-            location: "Pasadena, CA",
-            content: "Отличное полотно — плотное, приятное на ощупь. Принт яркий, чёткий, не тускнеет!",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i1.n"),
+            content: t("home.home_s6.i1.c"),
             img: ru
         },
         {
             id: 2,
-            name: "Беларусь",
-            location: "Ferndale, CA",
-            content: "Очень довольна! Полотно гладкое, без дефектов, принт чёткий и аккуратный. Все сделано с душой — ткань качественная, принт стойкий. Получила посылку — в восторге от текстиля и рисунка. Приятно держать в руках!",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i2.n"),
+            content: t("home.home_s6.i2.c"),
             img: bl
         },
 
         {
             id: 3,
-            name: "Казахстан",
-            location: "Pasadena, CA",
-            content: "Красота и качество! Принт живой, ткань плотная, не просвечивает. Оттенки насыщенные, ткань отличная.",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i3.n"),
+            content: t("home.home_s6.i3.c"),
             img: kz
         },
         {
             id: 4,
-            name: "Польша",
-            location: "Ferndale, CA",
-            content: `Отличное качество материала и принта. Ткань мягкая и прочная.
-Очень довольна! Всё как на фото, даже лучше. Цвета насыщенные, а материал действительно добротный. Спасибо!
-`,
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i4.n"),
+            content: t("home.home_s6.i4.c"),
             img: pl
         },
 
         {
             id: 5,
-            name: "Туркменистан",
-            location: "Pasadena, CA",
-            content: `Ткань просто превосходная — плотная, ровная, очень приятная на ощупь. Принт выглядит ярко и чётко, как на картинке. Даже после стирки всё остаётся без изменений.`,
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i5.n"),
+            content: t("home.home_s6.i5.c"),
             img: tr
         },
         {
             id: 6,
-            name: "Россия",
-            location: "Ferndale, CA",
-            content: "Очень порадовало качество исполнения. Цвета насыщенные, ничего не выцветает. Приятно удивлена такой стойкостью рисунка.",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i6.n"),
+            content: t("home.home_s6.i6.c"),
             img: ru
         },
 
         {
             id: 7,
-            name: "Турция",
-            location: "Pasadena, CA",
-            content: "Полотно хорошего качества, без запаха и дефектов. Принт напечатан аккуратно, линии чёткие. Видно, что сделано с вниманием к деталям.",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i7.n"),
+            content: t("home.home_s6.i7.c"),
             img: turkey
         },
         {
             id: 8,
-            name: "Таджикистан",
-            location: "Ferndale, CA",
-            content: "Заказываю уже не в первый раз — и всегда на высоте. Принт никогда не трескается, не стирается. Ткань остаётся как новая даже после нескольких стирок.",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i8.n"),
+            content: t("home.home_s6.i8.c"),
             img: tj
         },
 
         {
             id: 9,
-            name: "Россия",
-            location: "Pasadena, CA",
-            content: "Очень довольна заказом. Всё соответствует описанию, качество отличное.",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i9.n"),
+            content: t("home.home_s6.i9.c"),
             img: ru
         },
         {
             id: 10,
-            name: "Беларусь",
-            location: "Ferndale, CA",
-            content: "Приятная на ощупь ткань и стойкий принт. Обязательно закажу ещё!",
-            date: "Nov 24, 2023",
+            name: t("home.home_s6.i10.n"),
+            content: t("home.home_s6.i10.c"),
             img: bl
         },
 
@@ -296,26 +260,21 @@ const Home = ({options = {}}) => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className=" home_s1_item_1">
-                                <span>Устойчивое окрашивание</span>
-                                <h1>Как современные технологии гладкоокрашивания и печати помогают сохранять баланс
-                                    между качеством и экологией?</h1>
-                                <p>
-                                    Мы предлагаем гладкоокрашенные трикотажные полотна и цифровую печать на тканях,
-                                    сочетающие индустриальную точность с экологической ответственностью. Высокая
-                                    стойкость, яркость и безопасность — без компромиссов.
-                                </p>
+                                <span>{t("home.home_s1.subtitle")}</span>
+                                <h1>{t("home.home_s1.title")}</h1>
+                                <p>{t("home.home_s1.t_content")}</p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <img src={EcoPaint}/>
-                                <p>Экологичные <br/> чернила</p>
+                                <p dangerouslySetInnerHTML={{__html:t("home.home_s1.i1")}}></p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <img src={Cloth}/>
-                                <p> Тканевая <br/> основа</p>
+                                <p dangerouslySetInnerHTML={{__html:t("home.home_s1.i2")}}></p>
                             </div>
                         </div>
                     </div>
@@ -323,25 +282,25 @@ const Home = ({options = {}}) => {
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <img src={Factory}/>
-                                <p>Промышленная <br/> стойкость</p>
+                                <p dangerouslySetInnerHTML={{__html:t("home.home_s1.i3")}}></p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className=" home_s1_item_standart">
                                 <img src={Precision}/>
-                                <p>Фотореалистичная <br/> точность</p>
+                                <p dangerouslySetInnerHTML={{__html:t("home.home_s1.i4")}}></p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className="home_s1_item_standart">
                                 <img src={Consumables}/>
-                                <p>Безопасность <br/> материалов</p>
+                                <p dangerouslySetInnerHTML={{__html:t("home.home_s1.i5")}}></p>
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className="home_s1_item_standart">
                                 <img src={Adaptation}/>
-                                <p>Гибкость <br/> тиражей </p>
+                                <p dangerouslySetInnerHTML={{__html: t("home.home_s1.i6")}}></p>
                             </div>
                         </div>
                     </div>
@@ -364,11 +323,10 @@ const Home = ({options = {}}) => {
                         </div>
                         <div className="col-lg-5">
                             <div className="home_s2_text_content">
-                                <span>Уникальный принт</span>
-                                <h1>Персонально. Точно. Экологично.</h1>
-                                <p>Мы создаём печать, отражающую ваш стиль, идею и характер — точно, ярко и
-                                    экологично.</p>
-                                <Link to={"#"}>Услуги</Link>
+                                <span>{t("home.home_s2.span")}</span>
+                                <h1>{t("home.home_s2.h1")}</h1>
+                                <p>{t("home.home_s2.p")}</p>
+                                <Link to={ABOUT}>{t("home.home_s2.link")}</Link>
                             </div>
                         </div>
                     </div>
@@ -378,19 +336,26 @@ const Home = ({options = {}}) => {
             <section className={"home_s3"}>
                 <div className="home_corusel_wrapper">
                     <div className="home_corusel">
-                        <div className="home_corusel_item">Ярко</div>
-                        <div className="home_corusel_item">Качественно</div>
-                        <div className="home_corusel_item">Современно</div>
-                        <div className="home_corusel_item">Ярко</div>
-                        <div className="home_corusel_item">Быстро</div>
-                        <div className="home_corusel_item">Надёжно</div>
-                        <div className="home_corusel_item">Ярко</div>
-                        <div className="home_corusel_item">Качественно</div>
-                        <div className="home_corusel_item">Современно</div>
-                        <div className="home_corusel_item">Ярко</div>
-                        <div className="home_corusel_item">Быстро</div>
-                        <div className="home_corusel_item">Надёжно</div>
-
+                        <div className="home_corusel_item">{t('home.home_s3.i1')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i2')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i3')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i4')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i5')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i1')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i2')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i3')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i4')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i5')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i1')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i2')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i3')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i4')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i5')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i1')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i2')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i3')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i4')}</div>
+                        <div className="home_corusel_item">{t('home.home_s3.i5')}</div>
                     </div>
                 </div>
             </section>
@@ -464,24 +429,11 @@ const Home = ({options = {}}) => {
                 </Swiper>
             </section>
 
-            <section className={"home_s5 cursor_left_right"}>
+            <section className={"home_s5 "}>
                 <div className="container-sm ">
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={5}
-                        loop={true}
-                        navigation={true}
-                        modules={[Navigation]}
-                    >
-                        <SwiperSlide>
-                            <div className="home_s5_item">
-                                <h1>Наши клиенты — наш голос. <br/>
-                                    Они уже выбрали качество, теперь говорят о нём.
-                                </h1>
-                            </div>
-                        </SwiperSlide>
-
-                    </Swiper>
+                    <div className="home_s5_item">
+                        <h1 dangerouslySetInnerHTML={{__html:t("home.home_s5")}}></h1>
+                    </div>
                 </div>
             </section>
 
@@ -542,7 +494,7 @@ const Home = ({options = {}}) => {
                     <div className="row ">
                         <div className="col-lg-6">
                             <div className="home_s8_content">
-                                <h1>Комплексный подход к печати</h1>
+                                <h1>{t("home.home_s8.title")}</h1>
                                 <Collapse
                                     accordion
                                     expandIconPosition="start"
@@ -564,14 +516,14 @@ const Home = ({options = {}}) => {
                                     <img src={s8_1} alt="" ref={tiltRef}/>
                                     <div className="home_s8_content_item_box">
                                         <div className="home_s8_content_item">
-                                            <span>лет</span>
+                                            <span>{t("home.home_s8.year.year")}</span>
                                             <h3>10+ </h3>
-                                            <p> на рынке</p>
+                                            <p>{t("home.home_s8.year.rink")}</p>
                                         </div>
                                         <div className="home_s8_content_item">
-                                            <span> довольных </span>
+                                            <span> {t("home.home_s8.client.c1")} </span>
                                             <h3>580+</h3>
-                                            <p>клиентов</p>
+                                            <p>{t("home.home_s8.client.client")}</p>
                                         </div>
                                     </div>
                                 </div>

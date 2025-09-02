@@ -7,7 +7,7 @@ import {useLanguage} from "@/utils/lang/LangContext.jsx";
 import {Dropdown, Space} from "antd";
 import {languages} from "@/utils/lang/langs.jsx";
 import {CloseOutlined, DownOutlined, MenuOutlined} from "@ant-design/icons";
-import {ABOUT, CONTACT, HOME, PRODUCTION} from "@/utils/const.jsx";
+import {ABOUT, CONTACT, HOME, PRODUCT, PRODUCTION} from "@/utils/const.jsx";
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -74,6 +74,11 @@ const Navbar = () => {
                                 onClick={() => setIsMenuOpen(false)}
                                 to={PRODUCTION}>{t("navbar.production")}</Link>
                         </li>
+                        <li className={location === "/product" ? "active" : ""}>
+                            <Link
+                                onClick={() => setIsMenuOpen(false)}
+                                to={PRODUCT}>{t("navbar.product")}</Link>
+                        </li>
                         <li className={location === "/contact" ? "active" : ""}
                         >
                             <Link
@@ -115,7 +120,7 @@ const Navbar = () => {
                         </Dropdown>
 
                     </div>
-                    <Link to={CONTACT} className={"nav_end_link"}>Свяжитесь</Link>
+                    <Link to={CONTACT} className={"nav_end_link"}>{t("navbar.btn")}</Link>
                     <div className={`navburger `} style={isMenuOpen ? {color: "white"} : {}} onClick={toggleMenu}>
                         {isMenuOpen ? <CloseOutlined/> : <MenuOutlined/>}
                     </div>
