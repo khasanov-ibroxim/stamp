@@ -10,6 +10,7 @@ function App() {
     useEffect(() => {
         AOS.init({ duration: 1000 }); // AOS ni ishga tushirish va davomiyligini sozlash
     }, []);
+
     return (
         <>
             <CursorTrail/>

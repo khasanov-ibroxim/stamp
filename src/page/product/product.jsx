@@ -4,6 +4,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import header_1 from "@/assets/headers/2O8A4752.JPG";
 import header_2 from "@/assets/headers/2O8A4739_about.jpg";
+import GetAppIcon from '@mui/icons-material/GetApp';
 
 import i1 from "@/assets/product/1.jpg"
 import i2 from "@/assets/product/2.jpg"
@@ -219,7 +220,11 @@ const Product = () => {
                                 </div>
                             </div>
                         ))}
-
+                    </div>
+                    <div className="download_btn">
+                        <a href="@/assets/product/ассортимент_материалов_производства_Stampa_textile.xlsx" download>
+                            Скачать каталог <GetAppIcon/>
+                        </a>
                     </div>
                 </div>
             </section>

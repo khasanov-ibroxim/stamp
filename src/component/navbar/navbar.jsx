@@ -23,6 +23,12 @@ const Navbar = () => {
     const [isFixed, setIsFixed] = useState(false);
     const location = useLocation().pathname;
 
+    useEffect(()=>{
+        if (!selectedLanguage.label) {
+            window.localStorage.clear('i18nextLng')
+        }
+    },[])
+
     useEffect(() => {
         const handleResize = (e) => {
             setIsMobile(e.matches);

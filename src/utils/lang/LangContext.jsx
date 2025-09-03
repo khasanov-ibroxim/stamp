@@ -35,9 +35,12 @@ function useLanguage() {
     const context = useContext(LangContext);
 
     if (context === undefined) {
-        throw new Error("Language context was used outside of LangProvider");
+        throw new Error("lang error");
     }
 
+    if (context.selectedLanguage === undefined) {
+        window.localStorage.clear()
+    }
     return context;
 }
 
