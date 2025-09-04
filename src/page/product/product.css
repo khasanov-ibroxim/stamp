@@ -25,12 +25,12 @@
 }
 
 .product_item {
-    width: 400px;
     height: 500px;
     position: relative !important;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+    flex: 350px 1 1;
 }
 
 .product_img {
