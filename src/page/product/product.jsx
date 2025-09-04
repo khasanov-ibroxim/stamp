@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import "./product.css"
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
-import header_1 from "@/assets/headers/2O8A4752.JPG";
-import header_2 from "@/assets/headers/2O8A4739_about.jpg";
+import header_1 from "@/assets/product/DSC06513.jpg";
+import header_2 from "@/assets/product/abu.photographer-82.jpg";
+import header_3 from "@/assets/product/abu.photographer-101.jpg";
 import GetAppIcon from '@mui/icons-material/GetApp';
 
 import i1 from "@/assets/product/1.jpg"
@@ -167,12 +168,15 @@ const Product = () => {
         <div>
             <div className={`about_header`}>
                 <div className="about_header_opacity"></div>
-                <Swiper modules={[Autoplay]} autoplay={{delay: 5000}} className={"about_swiper"}>
+                <Swiper modules={[Autoplay]} autoplay={{delay: 3000}} className={"about_swiper"}>
                     <SwiperSlide>
                         <img src={header_1} alt=""/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={header_2} alt=""/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={header_3} alt=""/>
                     </SwiperSlide>
                 </Swiper>
                 <h1>Продукция</h1>
