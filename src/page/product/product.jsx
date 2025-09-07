@@ -7,6 +7,8 @@ import header_2 from "@/assets/product/abu.photographer-82.jpg";
 import header_3 from "@/assets/product/abu.photographer-101.jpg";
 import GetAppIcon from '@mui/icons-material/GetApp';
 
+// import excelFile from "../../../public/ассортимент_материалов_производства_Stampa_textile.xlsx";
+
 import i1 from "@/assets/product/1.jpg"
 import i2 from "@/assets/product/2.jpg"
 import i3 from "@/assets/product/3.jpg"
@@ -226,7 +228,7 @@ const Product = () => {
                         ))}
                     </div>
                     <div className="download_btn">
-                        <a href="@/assets/product/ассортимент_материалов_производства_Stampa_textile.xlsx" download>
+                        <a href={"../../../public/ассортимент_материалов_производства_Stampa_textile.xlsx"} download>
                             Скачать каталог <GetAppIcon/>
                         </a>
                     </div>
