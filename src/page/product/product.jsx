@@ -228,7 +228,7 @@ const Product = () => {
                         ))}
                     </div>
                     <div className="download_btn">
-                        <a href={"../../../public/ассортимент_материалов_производства_Stampa_textile.xlsx"} download>
+                        <a href={"/public/ассортимент_материалов_производства_Stampa_textile.xlsx"} download>
                             Скачать каталог <GetAppIcon/>
                         </a>
                     </div>
