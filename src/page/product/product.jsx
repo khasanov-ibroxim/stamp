@@ -102,7 +102,7 @@ const Product = () => {
                         <img src={header_3} alt=""/>
                     </SwiperSlide>
                 </Swiper>
-                <h1>Продукция</h1>
+                <h1>{t("product.header_title")}</h1>
             </div>
 
             <section className={"product_s1"}>
@@ -110,11 +110,10 @@ const Product = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <span>Stampa Textile</span>
-                            <h1>Качество, которое ощущается</h1>
+                            <h1>{t("product.s1.h1")}</h1>
                         </div>
                         <div className="col-lg-5">
-                            <p>Мы предлагаем премиальное трикотажное полотно всех цветов и фактур для ваших коллекций и
-                                идей.</p>
+                            <p>{t("product.s1.p")}</p>
                         </div>
                     </div>
                 </div>

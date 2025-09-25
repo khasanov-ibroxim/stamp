@@ -5,6 +5,7 @@ import {home_translate} from "@/utils/lang/translates/home_translate.jsx";
 import {about_translate} from "@/utils/lang/translates/about_translate.jsx";
 import {contact_translate} from "@/utils/lang/translates/contact_translate.jsx";
 import {production_translate} from "@/utils/lang/translates/production_translate.jsx";
+import {product_translate} from "@/utils/lang/translates/product_translate.jsx";
 
 i18n
     .use(initReactI18next)
@@ -20,6 +21,7 @@ i18n
                     home: home_translate.ru,
                     about: about_translate.ru,
                     production: production_translate.ru,
+                    product: product_translate.ru,
                     contact: contact_translate.ru,
                     navbar: {
                         home: "Главная",
@@ -67,6 +69,7 @@ i18n
                     home: home_translate.en,
                     about: about_translate.en,
                     production: production_translate.en,
+                    product: product_translate.en,
                     contact: contact_translate.en,
                     navbar: {
                         home: "Home",
