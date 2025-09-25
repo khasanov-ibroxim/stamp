@@ -13,15 +13,9 @@ import i1 from "@/assets/product/1.jpg"
 import i2 from "@/assets/product/2.jpg"
 import i3 from "@/assets/product/3.jpg"
 import i4 from "@/assets/product/4.jpg"
-import i5 from "@/assets/product/5.jpg"
-import i6 from "@/assets/product/6.jpg"
 import i7 from "@/assets/product/7.jpg"
-import i8 from "@/assets/product/8.jpg"
-import i9 from "@/assets/product/9.jpg"
-import i10 from "@/assets/product/10.jpg"
-import i11 from "@/assets/product/11.jpg"
 import i12 from "@/assets/product/12.jpg"
-
+import kosh from "@/assets/product/bf85a06cfe7f4be157a58e367240a7e3.jpg"
 
 import {useTranslation} from "react-i18next";
 import Footer from "@/component/footer/footer.jsx";
@@ -39,131 +33,58 @@ const Product = () => {
             img: i1,
             title: "Кулирка",
             list: [
-                'Ne 30/1',
-                `140-150гр/м²`,
-                `100% хлопок`
+                "Состав: 100% х/б 92/8"
             ]
         },
         {
             id: 2,
-            img: i2,
-            title: "Интерлок",
+            img: i3,
+            title: "Пике",
             list: [
-                'Ne 30/1',
-                `170-180гр/м²`,
-                `100% хлопок`
+                "Состав: 100% хб, 95/5"
             ]
         },
         {
             id: 3,
-            img: i3,
-            title: "Пике",
+            img: i2,
+            title: "Интерлок",
             list: [
-                'Ne 30/1',
-                `180-190гр/м²`,
-                `100% хлопок`
+                'Состав:  100% хб'
             ]
         },
         {
             id: 4,
-            img: i4,
-            title: "Футер",
+            img: i7,
+            title: "Рибана",
             list: [
-                'Ne 30/1',
-                `180-190гр/м²`,
-                `100% хлопок`
+                'Состав: 100% хб, 95/5'
             ]
         },
+
         {
             id: 5,
-            img: i5,
-            title: "Кулирка",
+            img: kosh,
+            title: "Кашкорсе",
             list: [
-                'Ne 40/1',
-                `150-160гр/м²`,
-                `92% хлопок`,
-                `8% эластан`
+                'Состав: 100%хб, 95/5'
             ]
         },
+
         {
             id: 6,
-            img: i6,
-            title: "Пике",
+            img: i4,
+            title: "Футер 2-х нитка",
             list: [
-                'Ne 30/1',
-                `210гр/м²`,
-                `92% хлопок`,
-                `8% эластан`,
+                'петля/диагональ/с начёсом',
+                'Состав: 100% хб, 95/5, ',
+                '72 хб/ 23 пэ/5 эластан'
             ]
         },
         {
             id: 7,
-            img: i7,
-            title: "Рибана",
-            list: [
-                'Ne 30/1',
-                `210-220гр/м²`,
-                `95% хлопок`,
-                `5% эластан`,
-                `Гребенная`,
-            ]
-        },
-        {
-            id: 8,
-            img: i8,
-            title: "Футер",
-            list: [
-                'Ne 30/20',
-                `240-260гр/м²`,
-                `95% хлопок`,
-                `5% эластан`,
-            ]
-        },
-        {
-            id: 9,
-            img: i9,
-            title: "Футер",
-            list: [
-                'Ne 30/100',
-                `210-220 гр/м²`,
-                `78% полиэстр`,
-                `14% эластан`,
-                `8% двойное крашение`,
-            ]
-        },
-        {
-            id: 10,
-            img: i10,
-            title: "Интерлок",
-            list: [
-                'Ne 36/1',
-                `170гр/м²`,
-                `100% хлопок`
-            ]
-        },
-        {
-            id: 11,
-            img: i11,
-            title: "Рибана",
-            list: [
-                'Ne 30/1',
-                `210-220гр/м²`,
-                `95% хлопок`,
-                `5% эластан`,
-                `Кардная`,
-            ]
-        },
-        {
-            id: 12,
             img: i12,
-            title: "Футер",
-            list: [
-                'Ne 30/150',
-                `210-230гр/м²`,
-                `78% полиэстр`,
-                `14% эластан`,
-                `8% двойное крашение`,
-            ]
+            title: "Футер 3-х нитка",
+            list: ["Петля/диагональ/с начёсом " , "Состав: 100%хб, 80хб/20пэ, 65хб/35пэ, 90хб/10пэ"]
         },
     ]
     return (
@@ -202,7 +123,7 @@ const Product = () => {
             <section className={"product_s2"}>
                 <div className="container-sm">
                     <div className="product_box">
-                        {productArray.map((item, index) => (
+                        {productArray.slice(0,4).map((item, index) => (
                             <div className="product_item">
                                 <img src={item.img} className={"product_img"} alt=""/>
                                 <div className="product_opacity"></div>
@@ -212,16 +133,44 @@ const Product = () => {
                                          style={clickedId === item.id ? {top: "4%"} : {top: "70%"}}>
                                         <h1>{item.title}</h1>
                                         <ul style={clickedId === item.id ? {display: "flex"} : {display: "none"}}>
-                                            <li>Пряжа: {item.list[0]}</li>
-                                            <li>Плотность: {item.list[1]}</li>
-                                            <li>Состав: {item.list[2]}</li>
+                                            {item.list.map((i,indexList)=>(
+                                                <li key={indexList}>
+                                                    {i}
+                                                </li>
+                                            ))}
                                             {item.list[3] && <li>{item.list[3]}</li>}
                                             {item.list[4] && <li>{item.list[4]}</li>}
                                         </ul>
                                     </div>
                                     <button
                                         onClick={() => handleClick(item.id)}>
-                                        подробно
+                                        Состав
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                        {productArray.slice(4,7).map((item, index) => (
+                            <div className="product_item">
+                                <img src={item.img} className={"product_img"} alt=""/>
+                                <div className="product_opacity"></div>
+                                <div className="product_content">
+                                    {clickedId === "sdfsdf"}
+                                    <div className="product_menu"
+                                         style={clickedId === item.id ? {top: "4%"} : {top: "70%"}}>
+                                        <h1>{item.title}</h1>
+                                        <ul style={clickedId === item.id ? {display: "flex"} : {display: "none"}}>
+                                            {item.list.map((i,indexList)=>(
+                                                <li key={indexList}>
+                                                    {i}
+                                                </li>
+                                            ))}
+                                            {item.list[3] && <li>{item.list[3]}</li>}
+                                            {item.list[4] && <li>{item.list[4]}</li>}
+                                        </ul>
+                                    </div>
+                                    <button
+                                        onClick={() => handleClick(item.id)}>
+                                        Состав
                                     </button>
                                 </div>
                             </div>

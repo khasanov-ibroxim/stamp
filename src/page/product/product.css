@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    flex: 350px 1 1;
+    flex: 250px 1 1;
 }
 
 .product_img {

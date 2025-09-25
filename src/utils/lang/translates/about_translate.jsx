@@ -46,7 +46,7 @@ export const about_translate ={
                 p:"клиентов"
             },
             i1:{
-                n:`Разработка дизайна`,
+                n:`Разработка и корректировка дизайна`,
                 d:`Помогаем выбрать стиль, адаптируем идеи под продукт и превращаем образы в визуальные решения.`
             },
             i2:{
@@ -99,7 +99,7 @@ export const about_translate ={
                 p:"clients"
             },
             i1:{
-                n:`Design Development`,
+                n:`Design development and adjustments`,
                 d:`We help define your style, adapt ideas to your product, and transform concepts into visual solutions.`
             },
             i2:{
