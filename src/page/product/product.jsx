@@ -19,10 +19,13 @@ import kosh from "@/assets/product/bf85a06cfe7f4be157a58e367240a7e3.jpg"
 
 import {useTranslation} from "react-i18next";
 import Footer from "@/component/footer/footer.jsx";
+import {useLanguage} from "@/utils/lang/LangContext.jsx";
 
 
 const Product = () => {
     const {t} = useTranslation();
+    const {handleLanguageChange, selectedLanguage} = useLanguage();
+
     const [clickedId, setClickedId] = useState(null);
     const handleClick = (id) => {
         setClickedId(clickedId === id ? null : id); // agar shu item bosilsa yopiladi
@@ -31,60 +34,60 @@ const Product = () => {
         {
             id: 1,
             img: i1,
-            title: "Кулирка",
+            title: t("product.i1.t"),
             list: [
-                "Состав: 100% х/б 92/8"
+                t("product.i1.c1")
             ]
         },
         {
             id: 2,
             img: i3,
-            title: "Пике",
+            title: t("product.i2.t"),
             list: [
-                "Состав: 100% хб, 95/5"
+                t("product.i2.c1")
             ]
         },
         {
             id: 3,
             img: i2,
-            title: "Интерлок",
+            title: t("product.i3.t"),
             list: [
-                'Состав:  100% хб'
+                t("product.i3.c1")
             ]
         },
         {
             id: 4,
             img: i7,
-            title: "Рибана",
+            title: t("product.i4.t"),
             list: [
-                'Состав: 100% хб, 95/5'
+                t("product.i4.c1")
             ]
         },
 
         {
             id: 5,
             img: kosh,
-            title: "Кашкорсе",
+            title: t("product.i5.t"),
             list: [
-                'Состав: 100%хб, 95/5'
+                t("product.i5.c1")
             ]
         },
 
         {
             id: 6,
             img: i4,
-            title: "Футер 2-х нитка",
+            title: t("product.i6.t"),
             list: [
-                'петля/диагональ/с начёсом',
-                'Состав: 100% хб, 95/5, ',
-                '72 хб/ 23 пэ/5 эластан'
+                t("product.i6.c1"),
+                t("product.i6.c2"),
+                t("product.i6.c3")
             ]
         },
         {
             id: 7,
             img: i12,
-            title: "Футер 3-х нитка",
-            list: ["Петля/диагональ/с начёсом " , "Состав: 100%хб, 80хб/20пэ,", " 65хб/35пэ, 90хб/10пэ"]
+            title: t("product.i7.t"),
+            list: [t("product.i7.c1") , t("product.i7.c2"), t("product.i7.c3")]
         },
     ]
     return (
@@ -143,7 +146,7 @@ const Product = () => {
                                     </div>
                                     <button
                                         onClick={() => handleClick(item.id)}>
-                                        Состав
+                                        {t("product.composition")}
                                     </button>
                                 </div>
                             </div>
@@ -169,15 +172,18 @@ const Product = () => {
                                     </div>
                                     <button
                                         onClick={() => handleClick(item.id)}>
-                                        Состав
+                                        {t("product.composition")}
                                     </button>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className="download_btn">
-                        <a href={"/ассортимент_материалов_производства_Stampa_textile.xlsx"} download>
-                            Скачать каталог <GetAppIcon/>
+                        <a
+                            href={selectedLanguage.code === "ru"
+                                ? "/ассортимент_материалов_производства_Stampa_textile.xlsx"
+                                : "/Catalog.xlsx"}  download>
+                            {t("product.download")} <GetAppIcon/>
                         </a>
                     </div>
                 </div>

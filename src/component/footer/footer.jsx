@@ -6,7 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 import VK from "./vk.png"
-import {ABOUT, CONTACT, HOME, PRODUCTION} from "@/utils/const.jsx";
+import {ABOUT, CONTACT, HOME, PRODUCT, PRODUCTION} from "@/utils/const.jsx";
 import {useTranslation} from "react-i18next";
 const Footer = () => {
     const {t} = useTranslation();
@@ -38,6 +38,7 @@ const Footer = () => {
                             <li><Link to={HOME} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t("footer.i3.l1")}</Link></li>
                             <li><Link to={ABOUT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t("footer.i3.l2")}</Link></li>
                             <li><Link to={PRODUCTION} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t("footer.i3.l3")}</Link></li>
+                            <li><Link to={PRODUCT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t("navbar.product")}</Link></li>
                             <li><Link to={CONTACT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t("footer.i3.l4")}</Link></li>
                         </ul>
                     </div>
