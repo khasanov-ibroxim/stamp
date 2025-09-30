@@ -107,7 +107,10 @@
     padding: 15px;
 }
 
-.contact_btn a {
+.contact_btn button {
+    border: none;
+    outline: none;
+    cursor: pointer;
     background: #EE7F51;
     color: #fff;
     padding: 15px 25px;
@@ -124,7 +127,7 @@
     font-family: var(--stol-r), sans-serif;
 }
 
-.contact_btn:hover a {
+.contact_btn:hover button {
     background: #DF6A39;
 
 }

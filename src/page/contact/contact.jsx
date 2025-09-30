@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./contact.css"
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
@@ -14,11 +14,86 @@ import {Link} from "react-router-dom";
 import Footer from "@/component/footer/footer.jsx";
 import header_img from "@/assets/headers/2O8A5113.JPG";
 import {useTranslation} from "react-i18next";
+import {message} from "antd";
+import axios from "axios";
 
 const Contact = () => {
     const {t} = useTranslation()
+    const [username, setUsername] = useState("");
+    const [tell, setTell] = useState("");
+    const [userMessage, setMsg] = useState("");
+    const [messageApi, contextHolder] = message.useMessage();
+    const [disabled, setDisabled] = useState(false);
+    const checkForm = () => {
+        setDisabled(true);
+
+        const hasNumber = /\d/;
+
+        if (!username || username.trim().length === 0) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.name_empty'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        if (username.trim().length <= 3 || hasNumber.test(username)) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.name_error'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        if (!tell || tell.trim().length < 8) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.tell_error'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        // To'g'ri xabar tuzamiz
+        let msg = "";
+        msg += `------------------\n`;
+        msg += `Имя: ${username}\n`;
+        msg += `Номер телефона: ${tell}\n`;
+        msg += `Сообщение: ${userMessage || '-'}\n`; // agar xohlasang textarea qiymatini ham qo‘shamiz
+
+        const TOKEN = "7394946478:AAG7acQmsnprwKeHIGWYauqPmP1QE_xhyg8";
+        const CHAT_ID = "-1003127722629";
+
+        axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: msg
+        }).then((res) => {
+            if (res?.status === 200) {
+                messageApi.open({
+                    type: 'success',
+                    content: t('errors.success'),
+                });
+                setTimeout(() => {
+                    setMsg('');
+                    setTell('');
+                    setUsername('');
+                    setDisabled(false);
+                }, 1800);
+            }
+        }).catch((e) => {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.server_error'),
+            });
+            setDisabled(false);
+        });
+    };
     return (
         <div>
+            {contextHolder}
             <div className="about_header" style={{background:`url(${header_img}) center center` , backgroundSize:"cover"}}>
                 <h1>{t("contact.header")}</h1>
             </div>
@@ -56,7 +131,9 @@ const Contact = () => {
                                     <div className="col-lg-12">
                                         <div className="input">
                                             <PersonOutlineSharpIcon/>
-                                            <input type="text" placeholder={t("contact.name")}/>
+                                            <input type="text"
+                                                   onChange={(e) => setUsername(e.target.value)}
+                                                   placeholder={t("contact.name")}/>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +141,9 @@ const Contact = () => {
                                     <div className="col-lg-12">
                                         <div className="input">
                                             <PhoneInTalkOutlinedIcon/>
-                                            <input type="tel" placeholder={t("contact.tel")}/>
+                                            <input type="tel"
+                                                   onChange={(e) => setTell(e.target.value)}
+                                                   placeholder={t("contact.tel")}/>
                                         </div>
                                     </div>
                                 </div>
@@ -75,6 +154,7 @@ const Contact = () => {
                                             <textarea
                                                 rows={3}
                                                 type="text"
+                                                onChange={(e)=>setMsg(e.target.value)}
                                                 placeholder={t("contact.msg")}/>
                                         </div>
                                     </div>
@@ -83,7 +163,7 @@ const Contact = () => {
                                 <div className="row mt-5 d-flex justify-content-center align-items-center">
                                     <div className="col-lg-12 col-sm-6 col-md-6">
                                         <div className="contact_btn">
-                                            <Link to={"#"}><SendOutlinedIcon/>{t("contact.send")}</Link>
+                                            <button onClick={checkForm} disabled={disabled}><SendOutlinedIcon/>{t("contact.send")}</button>
                                         </div>
                                     </div>
                                 </div>

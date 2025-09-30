@@ -61,6 +61,13 @@ i18n
                             l4:"Контакты",
                         },
                         i4:"Связаться с нами"
+                    },
+                    errors: {
+                        success: "A message has been sent, we will contact you shortly",
+                        name_empty: "Your name cannot be empty",
+                        name_error: "You typed your name incorrectly",
+                        tell_error: "Your phone number is incorrect",
+                        server_error: "A system error has occurred"
                     }
                 }
             },
@@ -108,6 +115,13 @@ i18n
                             l4:"Contacts",
                         },
                         i4:"Contact Us"
+                    },
+                    errors: {
+                        success: "A message has been sent, we will contact you shortly",
+                        name_empty: "Your name cannot be empty",
+                        name_error: "You typed your name incorrectly",
+                        tell_error: "Your phone number is incorrect",
+                        server_error: "A system error has occurred"
                     }
                 }
             },

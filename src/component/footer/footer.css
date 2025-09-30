@@ -67,12 +67,15 @@
     width: 100%;
 }
 
-.footer_form a{
+.footer_form button{
+    border: none;
+    outline: none;
     text-decoration: none;
     background: #df8058;
     color: white;
     padding: 15px 30px;
     border-radius: 25px;
+    cursor: pointer;
 }
 .footer_form a:hover{
     background: #DF6A39;
