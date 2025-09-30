@@ -35,7 +35,7 @@ import s5_7 from "@/assets/production/s5/2O8A4793.jpg"
 import s5_8 from "@/assets/production/s5/2O8A4974.JPG"
 
 import EastIcon from '@mui/icons-material/East';
-import {Timeline, Affix, Image} from 'antd';
+import {Timeline, Affix, Image, message} from 'antd';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import {useMediaQuery} from "@mui/material";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
@@ -62,16 +62,88 @@ import partnior_7 from "@/assets/home/partnior/part1.png";
 import partnior_8 from "@/assets/home/partnior/part2.png";
 import partnior_9 from "@/assets/home/partnior/part3.png";
 import {useTranslation} from "react-i18next";
+import axios from "axios";
 
 const Production = () => {
     const mediaQuery = useMediaQuery('(max-width: 1024px)');
     const mediaQuerySM = useMediaQuery('(max-width: 600px)');
     const {t} = useTranslation()
+    const [username, setUsername] = useState("");
+    const [tell, setTell] = useState("");
+    const [userMessage, setMsg] = useState("");
+    const [messageApi, contextHolder] = message.useMessage();
+    const [disabled, setDisabled] = useState(false);
+    const checkForm = () => {
+        setDisabled(true);
 
+        const hasNumber = /\d/;
+
+        if (!username || username.trim().length === 0) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.name_empty'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        if (username.trim().length <= 3 || hasNumber.test(username)) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.name_error'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        if (!tell || tell.trim().length < 8) {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.tell_error'),
+            });
+            setDisabled(false);
+            return;
+        }
+
+        // To'g'ri xabar tuzamiz
+        let msg = "";
+        msg += `------------------\n`;
+        msg += `Имя: ${username}\n`;
+        msg += `Номер телефона: ${tell}\n`;
+        msg += `Сообщение: ${userMessage || '-'}\n`; // agar xohlasang textarea qiymatini ham qo‘shamiz
+
+        const TOKEN = "7394946478:AAG7acQmsnprwKeHIGWYauqPmP1QE_xhyg8";
+        const CHAT_ID = "-1003127722629";
+
+        axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: msg
+        }).then((res) => {
+            if (res?.status === 200) {
+                messageApi.open({
+                    type: 'success',
+                    content: t('errors.success'),
+                });
+                setTimeout(() => {
+                    setMsg('');
+                    setTell('');
+                    setUsername('');
+                    setDisabled(false);
+                }, 1800);
+            }
+        }).catch((e) => {
+            messageApi.open({
+                type: 'error',
+                content: t('errors.server_error'),
+            });
+            setDisabled(false);
+        });
+    };
 
     return (
         <div>
-
+            {contextHolder}
             <div className={`about_header `}>
                 <div className="about_header_opacity"></div>
                 <Swiper modules={[Autoplay]} autoplay={{delay: 5000}} className={"about_swiper"}>
@@ -506,13 +578,16 @@ const Production = () => {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-lg-6">
                                 <div className="contact_form">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="input">
                                                 <PersonOutlineSharpIcon/>
-                                                <input type="text" placeholder={t("contact.name")}/>
+                                                <input type="text"
+                                                       onChange={(e)=>setUsername(e.target.value)}
+                                                       placeholder={t("contact.name")}/>
                                             </div>
                                         </div>
                                     </div>
@@ -520,7 +595,9 @@ const Production = () => {
                                         <div className="col-lg-12">
                                             <div className="input">
                                                 <PhoneInTalkOutlinedIcon/>
-                                                <input type="tel" placeholder={t("contact.tel")}/>
+                                                <input type="tel"
+                                                       onChange={(e)=>setTell(e.target.value)}
+                                                       placeholder={t("contact.tel")}/>
                                             </div>
                                         </div>
                                     </div>
@@ -531,6 +608,7 @@ const Production = () => {
                                                 <textarea
                                                     rows={3}
                                                     type="text"
+                                                    onChange={(e)=>setMsg(e.target.value)}
                                                     placeholder={t("contact.msg")}/>
                                             </div>
                                         </div>
@@ -539,7 +617,7 @@ const Production = () => {
                                     <div className="row mt-5 d-flex justify-content-center align-items-center">
                                         <div className="col-lg-12 col-sm-6 col-md-6">
                                             <div className="contact_btn">
-                                                <Link to={"#"}><SendOutlinedIcon/>{t("contact.send")}</Link>
+                                                <button onClick={checkForm} disabled={disabled}><SendOutlinedIcon/>{t("contact.send")}</button>
                                             </div>
                                         </div>
                                     </div>
